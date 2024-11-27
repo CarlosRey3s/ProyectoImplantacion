@@ -9,6 +9,8 @@ namespace DataLayer
 {
     public class DBOperaciones : DBConexion
     {
+        private string connectionString;
+
         public DataTable Consultar(String pConsulta)
         {
             DataTable Resultado = new DataTable();
@@ -77,6 +79,9 @@ namespace DataLayer
 
             return resultado;
         }
+
+        
+
 
     }
 }
