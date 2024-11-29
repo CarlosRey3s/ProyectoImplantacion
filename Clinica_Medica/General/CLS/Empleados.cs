@@ -1,9 +1,11 @@
 ﻿using DataLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace General.CLS
@@ -16,30 +18,63 @@ namespace General.CLS
         DateTime FechaNacEmpleado;
         string TelefonoEmpleado;
         string DUI_Empleado;
-        Int32 ISSS_Empleado;
+        string ISSS_Empleado;
         string Correo;
         string Direccion;
         Int32 ID_Cargo;
-        string Cargo;
-        public int ID_empleados { get => ID_empleado; set => ID_empleado = value; }
+       
+        public Int32 ID_empleados { get => ID_empleado; set => ID_empleado = value; }
         public string NombresEmpleados { get => NombresEmpleado; set => NombresEmpleado = value; }
         public string ApellidosEmpleados { get => ApellidosEmpleado; set => ApellidosEmpleado = value; }
         public DateTime FechaNacEmpleados { get => FechaNacEmpleado; set => FechaNacEmpleado = value; }
         public string TelefonoEmpleados { get => TelefonoEmpleado; set => TelefonoEmpleado = value; }
-
         public string DUI_Empleados { get => DUI_Empleado; set => DUI_Empleado = value; }
-        public int ISSS_Empleados { get => ISSS_Empleado; set => ISSS_Empleado = value; }
+        public string ISSS_Empleados { get => ISSS_Empleado; set => ISSS_Empleado = value; }
         public string Correos { get => Correo; set => Correo = value; }
         public string Direcciones { get => Direccion; set => Direccion = value; }
         public int ID_Cargos { get => ID_Cargo; set => ID_Cargo = value; }
-        public string Cargos { get => Cargo; set => Cargo = value; }
+       
+
+        public static DataTable MostrarEmpleados()
+        {
+            DataTable dt = new DataTable();
+            String consulta = "CALL MostrarEmpleados();";
+            DataLayer.DBOperaciones operaciones = new DataLayer.DBOperaciones();
+
+            try
+            {
+                dt = operaciones.Consultar(consulta);
+            }catch(Exception ex)
+            { }
+            return dt;
+        }
+        public static DataTable MostrarCargos()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT * FROM cm_cargos;";
+            DBOperaciones operacion = new DBOperaciones();
+            try
+            {
+                Resultado = operacion.Consultar(Consulta);
+            }
+            catch (Exception ex) { }
+            return Resultado;
+        }
         public Boolean Insertar()
         {
             Boolean Resultado = false;
             DataLayer.DBOperaciones Operaciones = new DataLayer.DBOperaciones();
             StringBuilder Sentencia = new StringBuilder();
-            Sentencia.Append("INSERT INTO `clinicamedica`.`empleados` (`Nombre`, `Apellido`, `FechaNacminiento`, `telefono`, `DUI`, `ISSS`, `Correo`, `Direccion`, `Cargos_ID_Cargo`) VALUES (");
-            Sentencia.Append("'" + NombresEmpleado + "', '" + ApellidosEmpleado + "', '" + FechaNacEmpleado.ToString("yyyy-MM-dd") + "', '" + TelefonoEmpleado + "', '" + DUI_Empleado + "', '" + ISSS_Empleado + "', '" + Correo + "', '" + Direccion + "', '" + ID_Cargo + "');");
+            Sentencia.Append("CALL InsertarEmpleados(");
+            Sentencia.Append("'" + NombresEmpleado + "', ");
+            Sentencia.Append("'" + ApellidosEmpleado + "', ");
+            Sentencia.Append("'" + FechaNacEmpleado.ToString("yyyy-MM-dd HH:mm:ss") + "', ");
+            Sentencia.Append("'" + TelefonoEmpleado + "', ");
+            Sentencia.Append("'" + DUI_Empleado + "', ");
+            Sentencia.Append("'" + ISSS_Empleado + "', ");
+            Sentencia.Append("'" + Direccion + "', ");
+            Sentencia.Append("'" + Correo + "', ");
+            Sentencia.Append("'" + ID_Cargo + "');");
             try
             {
                 if(Operaciones.EjecutarSentencia(Sentencia.ToString()) >=0)
@@ -53,6 +88,7 @@ namespace General.CLS
             }catch(Exception ex)
             {
                 Resultado = false;
+                Console.WriteLine("Error al insertar el empleado: " + ex.Message);
             }
             return Resultado;
         }
@@ -61,17 +97,18 @@ namespace General.CLS
             Boolean Resultado = false;
             DataLayer.DBOperaciones operaciones = new DataLayer.DBOperaciones();
             StringBuilder Sentencia = new StringBuilder();
-            Sentencia.Append("UPDATE empleados SET ");
-            Sentencia.Append("`Nombre` = '" + NombresEmpleado + "', ");
-            Sentencia.Append("`Apellido` = '" + ApellidosEmpleado + "', ");
-            Sentencia.Append("`FechaNacminiento` = '" + FechaNacEmpleado.ToString("yyyy-MM-dd") + "', ");
-            Sentencia.Append("`Telefono` = '" + TelefonoEmpleado + "', ");
-            Sentencia.Append("`DUI` = '" + DUI_Empleado + "', ");
-            Sentencia.Append("`ISSS` = '" + ISSS_Empleado + "', ");
-            Sentencia.Append("`Correo` = '" + Correo + "', ");
-            Sentencia.Append("`Direccion` = '" + Direccion + "', ");
-            Sentencia.Append("`Cargos_ID_Cargo` = '" + ID_Cargo + "' ");
-            Sentencia.Append("WHERE `ID_Empleado` = '" + ID_empleado + "';");
+            Sentencia.Append("CALL ActualizarEmpleado(");
+            Sentencia.Append("'" + ID_empleado + "', ");
+            Sentencia.Append("'" + NombresEmpleado + "', ");
+            Sentencia.Append("'" + ApellidosEmpleado + "', ");
+            Sentencia.Append("'" + FechaNacEmpleado.ToString("yyyy-MM-dd HH:mm:ss") + "', ");
+            Sentencia.Append("'" + TelefonoEmpleado + "', ");
+            Sentencia.Append("'" + DUI_Empleado + "', ");
+            Sentencia.Append("'" + ISSS_Empleado + "', ");
+            Sentencia.Append("'" + Correo + "', ");
+            Sentencia.Append("'" + Direccion + "', ");
+            Sentencia.Append(ID_Cargo + ");"); // Sin comillas porque es numérico
+
             try
             {
                 if (operaciones.EjecutarSentencia(Sentencia.ToString()) >= 0)
@@ -85,6 +122,7 @@ namespace General.CLS
             }
             catch (Exception ex)
             {
+                Console.WriteLine("Error al actualizar el empleado: " + ex.Message);
                 Resultado = false;
             }
             return Resultado;
@@ -96,8 +134,8 @@ namespace General.CLS
             DataLayer.DBOperaciones Operacion = new DataLayer.DBOperaciones();
             //permiten construir cadenas los stringBuilder
             StringBuilder Setencia = new StringBuilder();
-            Setencia.Append("DELETE FROM empleados ");
-            Setencia.Append("WHERE ID_empleado =" + ID_empleado + ";");
+            Setencia.Append("CALL EliminarEmpleado(");
+            Setencia.Append(ID_empleado + ");");
             try
             {
                 if (Operacion.EjecutarSentencia(Setencia.ToString()) >= 0)

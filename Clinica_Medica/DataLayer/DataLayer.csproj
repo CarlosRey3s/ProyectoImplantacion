@@ -93,7 +93,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consulta.cs" />
     <Compile Include="DBConexion.cs" />
     <Compile Include="DBOperaciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

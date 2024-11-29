@@ -40,7 +40,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +64,7 @@
             this.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtClave.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtClave.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtClave.Location = new System.Drawing.Point(76, 260);
+            this.txtClave.Location = new System.Drawing.Point(82, 279);
             this.txtClave.Margin = new System.Windows.Forms.Padding(4);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(288, 34);
@@ -75,7 +74,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(69, 228);
+            this.label3.Location = new System.Drawing.Point(75, 247);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 28);
@@ -86,7 +85,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(71, 132);
+            this.label2.Location = new System.Drawing.Point(77, 151);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 28);
@@ -101,7 +100,7 @@
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(76, 348);
+            this.btnEntrar.Location = new System.Drawing.Point(82, 367);
             this.btnEntrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(288, 51);
@@ -114,7 +113,7 @@
             // 
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtUsuario.Location = new System.Drawing.Point(76, 164);
+            this.txtUsuario.Location = new System.Drawing.Point(82, 183);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(288, 34);
@@ -123,7 +122,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
@@ -141,7 +139,7 @@
             // label6
             // 
             this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
-            this.label6.Location = new System.Drawing.Point(35, 164);
+            this.label6.Location = new System.Drawing.Point(41, 183);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 32);
             this.label6.TabIndex = 18;
@@ -149,7 +147,7 @@
             // label5
             // 
             this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
-            this.label5.Location = new System.Drawing.Point(35, 260);
+            this.label5.Location = new System.Drawing.Point(41, 279);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 32);
             this.label5.TabIndex = 17;
@@ -158,7 +156,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(148, 45);
+            this.label4.Location = new System.Drawing.Point(154, 64);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 38);
             this.label4.TabIndex = 16;
@@ -171,18 +169,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(428, 558);
             this.label1.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(136, 433);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 28);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Registrar Usuario";
             // 
             // Login
             // 
@@ -217,6 +203,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
     }
 }

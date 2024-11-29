@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DataLayer;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,18 +21,43 @@ namespace General.CLS
         public int ID_Empleado1 { get => ID_Empleado; set => ID_Empleado = value; }
         public int NumeroLicencia1 { get => NumeroLicencia; set => NumeroLicencia = value; }
         public string Especialidads { get => Especialidad; set => Especialidad = value; }
+
+        public static DataTable MostrarEspecialidades()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = "CALL MostrarEspecialidades()";
+            DBOperaciones operacion = new DBOperaciones();
+            try
+            {
+                Resultado = operacion.Consultar(Consulta);
+            }
+            catch (Exception ex) { }
+            return Resultado;
+        }
+
+        public static DataTable MostrarDoctores()
+        {
+            DataTable dt = new DataTable();
+            String consulta = "CALL MostrarDoctores();";
+            DataLayer.DBOperaciones operaciones = new DataLayer.DBOperaciones();
+            try
+            { dt = operaciones.Consultar(consulta);  }
+            catch (Exception ex)
+            { }
+            return dt;
+        }
+
         public Boolean Insertar()
         {
             Boolean Resultado = false;
-
             DataLayer.DBOperaciones Operaciones = new DataLayer.DBOperaciones();
-
             StringBuilder Sentencia = new StringBuilder();
+            Sentencia.Append("CALL InsertarDoctor(");
+            Sentencia.Append("'" + NumeroLicencia + "', ");
+            Sentencia.Append("'" + ID_Especialidad + "', ");
+            Sentencia.Append("'" + ID_Empleado + "');");
 
-
-            Sentencia.Append("INSERT INTO `clinica_medica`.`doctor` (`ID_Doctor`, `ID_Especialidad`, `ID_Empleado`, `NumeroLicencia`) VALUES (");
-            Sentencia.Append("'" + ID_Doctor + "', '" + ID_Especialidad + "', '" + ID_Empleado + "', '" + NumeroLicencia + "');");
-
+            // Ejecutar la sentencia en la base de datos usando el objeto Operaciones
             try
             {
                 if (Operaciones.EjecutarSentencia(Sentencia.ToString()) >= 0)
@@ -47,21 +74,21 @@ namespace General.CLS
                 Resultado = false;
             }
             return Resultado;
-        }//Finaliza metodo insertar
+        }
         public Boolean Actualizar()
         {
             Boolean Resultado = false;
-            DataLayer.DBOperaciones operaciones = new DataLayer.DBOperaciones();
+            DataLayer.DBOperaciones Operaciones = new DataLayer.DBOperaciones();
             StringBuilder Sentencia = new StringBuilder();
-            Sentencia.Append("UPDATE doctor SET ");
-            Sentencia.Append("`ID_Especialidad` = " + ID_Especialidad + ", ");
-            Sentencia.Append("`ID_Empleado` = " + ID_Empleado + ", ");
-            Sentencia.Append("`NumeroLicencia` = '" + NumeroLicencia + "' ");
-            Sentencia.Append("WHERE `ID_Doctor` = " + ID_Doctor + ";");
-
+            Sentencia.Append("CALL ActualizarDoctor(");
+            Sentencia.Append("'" + ID_Doctor + "', ");
+            Sentencia.Append("'" + NumeroLicencia + "', ");
+            Sentencia.Append("'" + ID_Especialidad + "', ");
+            Sentencia.Append("'" + ID_Empleado + "');");
+            // Ejecutar la sentencia en la base de datos usando el objeto Operaciones
             try
             {
-                if (operaciones.EjecutarSentencia(Sentencia.ToString()) >= 0)
+                if (Operaciones.EjecutarSentencia(Sentencia.ToString()) >= 0)
                 {
                     Resultado = true;
                 }
@@ -75,22 +102,19 @@ namespace General.CLS
                 Resultado = false;
             }
             return Resultado;
-
-        }//finaliza el metodo actualizar
-
+        }
         public Boolean Eliminar()
         {
             Boolean Resultado = false;
-            //crando el obejto
-            DataLayer.DBOperaciones Operacion = new DataLayer.DBOperaciones();
-            //permiten construir cadenas los stringBuilder
+            DataLayer.DBOperaciones Operaciones = new DataLayer.DBOperaciones();
+            StringBuilder Sentencia = new StringBuilder();
 
-            StringBuilder Setencia = new StringBuilder();
-            Setencia.Append("DELETE FROM doctor ");
-            Setencia.Append("WHERE ID_Doctor =" + ID_Doctor + ";");
+            // Construir la sentencia SQL para ejecutar el procedimiento EliminarDoctor
+            Sentencia.Append("CALL EliminarDoctor(");
+            Sentencia.Append("'" + ID_Doctor + "');");
             try
             {
-                if (Operacion.EjecutarSentencia(Setencia.ToString()) >= 0)
+                if (Operaciones.EjecutarSentencia(Sentencia.ToString()) >= 0)
                 {
                     Resultado = true;
                 }
@@ -98,7 +122,6 @@ namespace General.CLS
                 {
                     Resultado = false;
                 }
-
             }
             catch (Exception)
             {

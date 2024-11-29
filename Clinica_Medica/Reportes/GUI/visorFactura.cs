@@ -25,9 +25,7 @@ namespace Reportes.GUI
         {
             try
             {
-                reporte = new REP.Factura(); // Corrige el nombre de la clase del informe si es diferente
-                reporte.SetDataSource(DataLayer.Consulta.FacturasSegunPeriodo(dtpInicio.Text, dtpFinal.Text));
-                cristalFactura.ReportSource = reporte;
+               
             }
             catch (Exception ex)
             {
