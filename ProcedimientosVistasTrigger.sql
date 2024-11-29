@@ -23,6 +23,46 @@ CREATE TABLE IF NOT EXISTS `CM_DetalleFacturas` (
     ON UPDATE CASCADE
 ) ENGINE = InnoDB;
 
+-- 10 ejemplos para medicamentos
+INSERT INTO CM_Medicamentos 
+(Med_Nombre, Med_Cantidad, Med_PrecioUnitario, Med_Descripcion, Med_FechaVen, Med_CantidadVendida)
+VALUES
+('Paracetamol 500mg', 200, 0.15, 'Analgésico y antipirético', '2025-05-15', 0),
+('Ibuprofeno 400mg', 150, 0.20, 'Antiinflamatorio no esteroideo', '2025-08-10', 0),
+('Amoxicilina 500mg', 120, 0.30, 'Antibiótico de amplio espectro', '2026-01-12', 0),
+('Omeprazol 20mg', 300, 0.25, 'Inhibidor de la bomba de protones', '2025-12-31', 0),
+('Metformina 850mg', 250, 0.18, 'Tratamiento para la diabetes tipo 2', '2026-03-20', 0),
+('Losartán 50mg', 180, 0.22, 'Antihipertensivo', '2025-09-15', 0),
+('Salbutamol Inhalador', 100, 4.50, 'Broncodilatador para asma y EPOC', '2026-06-10', 0),
+('Cetirizina 10mg', 350, 0.12, 'Antihistamínico para alergias', '2025-11-05', 0),
+('Clonazepam 2mg', 50, 0.35, 'Benzodiacepina para trastornos de ansiedad', '2025-07-01', 0),
+('Acetaminofén Infantil Jarabe', 75, 1.80, 'Analgésico y antipirético en jarabe', '2025-10-15', 0);
+
+-- Ejemplos para paciente
+INSERT INTO CM_Pacientes 
+(Pac_Nombre, Pac_Apellido, Pac_FechaNacimiento, Pac_Genero, Pac_Telefono, Pac_CorreoElectronico, Pac_Direccion)
+VALUES
+('RAUL EDGARDO', 'ALARCON MONGE', '1990-01-15', 'M', '70123456', 'raul.alarcon@example.com', 'San Salvador, El Salvador'),
+('HILDER ENRIQUE', 'ALPE BRAN', '1988-05-20', 'M', '71123457', 'hilder.alpe@example.com', 'Santa Ana, El Salvador'),
+('KEVIN MIGUEL', 'APARICIO HERNANDEZ', '1995-08-12', 'M', '72123458', 'kevin.aparicio@example.com', 'Soyapango, El Salvador'),
+('GERSON LEONEL', 'BRENES SANCHEZ', '1992-03-25', 'M', '73123459', 'gerson.brenes@example.com', 'Usulután, El Salvador'),
+('ERNESTO ENRIQUE', 'CALZADILLA GALICIA', '1987-12-10', 'M', '74123450', 'ernesto.calzadilla@example.com', 'La Libertad, El Salvador'),
+('ERICK OTONIEL', 'CENTENO CHAVEZ', '1994-07-18', 'M', '75123451', 'erick.centeno@example.com', 'Santa Tecla, El Salvador'),
+('ADOLFO ERNESTO', 'CORTEZ BARRERA', '1989-11-30', 'M', '76123452', 'adolfo.cortez@example.com', 'San Miguel, El Salvador'),
+('MELVIN EDGARDO', 'CUELLAR TORRES', '1993-06-05', 'M', '77123453', 'melvin.cuellar@example.com', 'Sonsonate, El Salvador'),
+('JULIA MARCELA', 'CUEVAS SAGGETH', '1991-04-22', 'F', '78123454', 'julia.cuevas@example.com', 'Ahuachapán, El Salvador'),
+('RODRIGO OLIVERIO', 'FERNANDEZ ZAVALETA', '1985-09-17', 'M', '80123456', 'rodrigo.fernandez@example.com', 'San Vicente, El Salvador'),
+('VICTOR JOSUE', 'FLORES CORTEZ', '1998-02-11', 'M', '81123457', 'victor.flores@example.com', 'Chalatenango, El Salvador'),
+('KEVIN JAVIER', 'FLORES MENDOZA', '1997-11-09', 'M', '82123458', 'kevin.flores@example.com', 'San Francisco, El Salvador'),
+('Javier Antonio', 'Galindo Cortez', '1990-01-15', 'M', '70123456', 'javier.galindo@example.com', 'Calle Principal #123'),
+('Alejandra Fabiana', 'Garzona Tejada', '1995-06-23', 'F', '72123456', 'alejandra.garzona@example.com', 'Colonia Los Arcos, Casa 45'),
+('Dennis Mauricio', 'Godinez Navidad', '1988-11-30', 'M', '73123456', 'dennis.godinez@example.com', 'Residencial El Bosque, Lote 3'),
+('Einer Alexis', 'Gutierrez Bautista', '1992-04-18', 'M', '74123456', 'einer.gutierrez@example.com', 'Boulevard Alameda, Torre A'),
+('Valeria Cristina', 'Hernandez Sambrano', '1998-09-12', 'F', '75123456', 'valeria.hernandez@example.com', 'Colonia Jardines del Valle, Casa 67'),
+('Mario Roberto', 'Lopez Arevalo', '1985-02-08', 'M', '76123456', 'mario.lopez@example.com', 'Calle Las Rosas, Apartamento 204'),
+('Alma Mireya', 'Lopez Lopez', '1978-05-22', 'F', '77123456', 'alma.lopez@example.com', 'Barrio El Centro, Avenida 1 #56');
+
+
 
 -- =================================================================
 
@@ -104,11 +144,7 @@ FROM CM_Pacientes;
 
 -- ====================================================
 
-
--- -------------------------------------------------
-
 -- ===================================================================
-
 DELIMITER $$
 
 CREATE PROCEDURE sp_InsertarDetalleFactura(
@@ -120,25 +156,44 @@ CREATE PROCEDURE sp_InsertarDetalleFactura(
     IN p_id_medicamento INT
 )
 BEGIN
-    INSERT INTO CM_DetalleFacturas (
-        Det_Cantidad,
-        Det_Descuento,
-        Det_SubTotal,
-        Det_Total,
-        Facturas_ID_Factura,
-        Medicamentos_ID_Medicamento
-    )
-    VALUES (
-        p_cantidad,
-        p_descuento,
-        p_subtotal,
-        p_total,
-        p_id_factura,
-        p_id_medicamento
-    );
+    DECLARE v_cantidad_disponible INT;
+
+    -- Obtener la cantidad disponible del medicamento
+    SELECT Med_Cantidad
+    INTO v_cantidad_disponible
+    FROM CM_Medicamentos
+    WHERE ID_Medicamento = p_id_medicamento;
+
+    -- Validar si hay suficiente cantidad
+    IF v_cantidad_disponible >= p_cantidad THEN
+        -- Actualizar la cantidad disponible en medicamentos
+        
+        -- Insertar el detalle de la factura
+        INSERT INTO CM_DetalleFacturas (
+            Det_Cantidad,
+            Det_Descuento,
+            Det_SubTotal,
+            Det_Total,
+            Facturas_ID_Factura,
+            Medicamentos_ID_Medicamento
+        )
+        VALUES (
+            p_cantidad,
+            p_descuento,
+            p_subtotal,
+            p_total,
+            p_id_factura,
+            p_id_medicamento
+        );
+    ELSE
+        -- Si no hay suficiente cantidad, lanzar un error
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'No hay suficiente cantidad disponible para este medicamento.';
+    END IF;
 END $$
 
 DELIMITER ;
+
 -- Ejemplo
 -- CALL sp_InsertarDetalleFactura(10, 5.00, 100.00, 95.00, 1, 2);
 -- ======================================================================
