@@ -23,16 +23,7 @@ namespace Reportes.GUI
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                reporte = new REP.Factura(); // Corrige el nombre de la clase del informe si es diferente
-                reporte.SetDataSource(DataLayer.Consulta.FacturasSegunPeriodo(dtpInicio.Text, dtpFinal.Text));
-                cristalFactura.ReportSource = reporte;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al mostrar el reporte: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
 
         private void btnPDF_Click(object sender, EventArgs e)

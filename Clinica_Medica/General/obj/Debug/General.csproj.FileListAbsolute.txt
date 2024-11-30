@@ -505,14 +505,12 @@ C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.GUI.GUIEdicion.Fa
 C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.GUI.GUIGestiones.FacturaGestion.resources
 C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.GUI.GUIGestiones.prueba.resources
 C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.GUI.Home.resources
-C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.GUI.VistaPrevia.VistaPreviaEmpleado.resources
 C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.Properties.Resources.resources
 C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.csproj.GenerateResource.cache
 C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.csproj.CoreCompileInputs.cache
 C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.csproj.Up2Date
 C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.dll
 C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.pdb
-C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.GUI.GUIGestiones.DetallesFactura.resources
 C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.GUI.GUIGestiones.ListaPaciente.resources
 C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.GUI.GUIGestiones.ListaConsulta.resources
 C:\Users\halle\Videos\Clinica_Medica\General\obj\Debug\General.GUI.GUIGestiones.ListaMedicamentos.resources

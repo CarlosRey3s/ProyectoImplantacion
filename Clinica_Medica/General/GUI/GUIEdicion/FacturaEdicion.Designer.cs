@@ -149,6 +149,7 @@
             this.txtNumeroFactura.Size = new System.Drawing.Size(221, 29);
             this.txtNumeroFactura.TabIndex = 59;
             this.txtNumeroFactura.TextChanged += new System.EventHandler(this.txtNombresPaciente_TextChanged);
+            this.txtNumeroFactura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroFactura_KeyPress);
             // 
             // dtpFecha
             // 
@@ -276,10 +277,12 @@
             // txtMedicamento
             // 
             this.txtMedicamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMedicamento.Enabled = false;
             this.txtMedicamento.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtMedicamento.Location = new System.Drawing.Point(149, 359);
             this.txtMedicamento.Name = "txtMedicamento";
-            this.txtMedicamento.Size = new System.Drawing.Size(120, 29);
+            this.txtMedicamento.ReadOnly = true;
+            this.txtMedicamento.Size = new System.Drawing.Size(158, 29);
             this.txtMedicamento.TabIndex = 72;
             this.txtMedicamento.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -290,7 +293,7 @@
             this.btnRecetaMedicamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecetaMedicamentos.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnRecetaMedicamentos.ForeColor = System.Drawing.Color.White;
-            this.btnRecetaMedicamentos.Location = new System.Drawing.Point(275, 358);
+            this.btnRecetaMedicamentos.Location = new System.Drawing.Point(313, 359);
             this.btnRecetaMedicamentos.Name = "btnRecetaMedicamentos";
             this.btnRecetaMedicamentos.Size = new System.Drawing.Size(97, 29);
             this.btnRecetaMedicamentos.TabIndex = 73;
@@ -427,7 +430,7 @@
             this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtCantidad.Location = new System.Drawing.Point(149, 394);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(120, 29);
+            this.txtCantidad.Size = new System.Drawing.Size(158, 29);
             this.txtCantidad.TabIndex = 75;
             this.txtCantidad.Text = "0";
             this.txtCantidad.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -497,7 +500,7 @@
             "20"});
             this.ccbDesc.Location = new System.Drawing.Point(149, 429);
             this.ccbDesc.Name = "ccbDesc";
-            this.ccbDesc.Size = new System.Drawing.Size(120, 29);
+            this.ccbDesc.Size = new System.Drawing.Size(158, 29);
             this.ccbDesc.TabIndex = 81;
             this.ccbDesc.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -505,7 +508,7 @@
             // 
             this.txtIDMedicamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDMedicamento.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtIDMedicamento.Location = new System.Drawing.Point(378, 358);
+            this.txtIDMedicamento.Location = new System.Drawing.Point(416, 359);
             this.txtIDMedicamento.Name = "txtIDMedicamento";
             this.txtIDMedicamento.Size = new System.Drawing.Size(28, 29);
             this.txtIDMedicamento.TabIndex = 87;
@@ -528,6 +531,7 @@
             // 
             // cbbMetodoPago
             // 
+            this.cbbMetodoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMetodoPago.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbMetodoPago.FormattingEnabled = true;
             this.cbbMetodoPago.Items.AddRange(new object[] {
@@ -575,7 +579,7 @@
             // 
             this.lbDoc.AutoSize = true;
             this.lbDoc.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.lbDoc.Location = new System.Drawing.Point(145, 240);
+            this.lbDoc.Location = new System.Drawing.Point(149, 240);
             this.lbDoc.Name = "lbDoc";
             this.lbDoc.Size = new System.Drawing.Size(137, 20);
             this.lbDoc.TabIndex = 94;

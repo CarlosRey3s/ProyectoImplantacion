@@ -37,7 +37,7 @@ namespace General.GUI.GUIEdicion
             try
             {
                 // Obtener los datos de la base de datos y cargar en el DataGridView
-                _DATOS.DataSource = DataLayer.Consulta.ObternerDetalleFac(ID_Facturav2);
+                _DATOS.DataSource = Factura.ObternerDetalleFac(ID_Facturav2);
                 dgvDetallesFactura.DataSource = _DATOS;
 
                 // Iterar sobre todas las filas del DataGridView
@@ -535,6 +535,20 @@ namespace General.GUI.GUIEdicion
             catch (Exception ex)
             {
                 MessageBox.Show("Ocurrió un error al intentar eliminar la factura: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void txtNumeroFactura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir control (como la tecla Backspace) y dígitos (0-9)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Permitir un solo punto decimal
+                if (e.KeyChar != '.' || ((TextBox)sender).Text.Contains("."))
+                {
+                    e.Handled = true; // Cancela la entrada si no cumple los criterios
+                }
             }
 
         }

@@ -128,6 +128,8 @@ namespace General.CLS
             return Resultado;
         }
 
+        
+
 
 
         public Boolean Eliminar()
@@ -159,7 +161,24 @@ namespace General.CLS
             return Resultado;
         }
 
+        public static DataTable ObternerDetalleFac(int IDfactura)
+        {
+            DataTable Resultado = new DataTable();
+
+            String Consulta = "CALL sp_ObtenerDetallesFactura(" + IDfactura + ");";
+            DBOperaciones operacion = new DBOperaciones();
+            try
+            {
+                Resultado = operacion.Consultar(Consulta);
+            }
+            catch (Exception)
+            { }
+            return Resultado;
+
+        }
+
     }
+
 
 
 }

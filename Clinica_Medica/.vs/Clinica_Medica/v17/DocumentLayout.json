@@ -1,105 +1,105 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\halle\\Videos\\Clinica_Medica\\",
+  "WorkspaceRootPath": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guiedicion\\facturaedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guiedicion\\facturaedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guiedicion\\facturaedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guiedicion\\facturaedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|c:\\users\\halle\\videos\\clinica_medica\\general\\controladores\\controladorfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\controladores\\controladorfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\controladores\\controladordetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\controladores\\controladordetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guigestiones\\facturagestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\facturagestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guigestiones\\facturagestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\facturagestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\cls\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\cls\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guigestiones\\listamedicamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\listamedicamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guigestiones\\listamedicamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\listamedicamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guigestiones\\listapaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\listapaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guigestiones\\listapaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\listapaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guigestiones\\listaconsulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\listaconsulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guigestiones\\listaconsulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\listaconsulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D50295D-8379-4628-9D89-A9DF19EAC0ED}|DataLayer\\DataLayer.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\datalayer\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D50295D-8379-4628-9D89-A9DF19EAC0ED}|DataLayer\\DataLayer.csproj|c:\\users\\halle\\music\\proyectoimplantacion\\clinica_medica\\datalayer\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D50295D-8379-4628-9D89-A9DF19EAC0ED}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\cls\\facturadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\cls\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\cls\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\controladores\\controladorfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\controladores\\controladorfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\controladores\\controladordetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\controladores\\controladordetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\cls\\facturadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\cls\\facturadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\cls\\medicamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\cls\\medicamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\gui\\guiedicion\\facturaedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guiedicion\\facturaedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\cls\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\cls\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1809692B-55EA-46D6-91C9-664C2A4B34B4}|Reportes\\Reportes.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\reportes\\gui\\visormedicamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1809692B-55EA-46D6-91C9-664C2A4B34B4}|Reportes\\Reportes.csproj|solutionrelative:reportes\\gui\\visormedicamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guigestiones\\detallesfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\detallesfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1809692B-55EA-46D6-91C9-664C2A4B34B4}|Reportes\\Reportes.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\reportes\\gui\\visorfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1809692B-55EA-46D6-91C9-664C2A4B34B4}|Reportes\\Reportes.csproj|solutionrelative:reportes\\gui\\visorfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guigestiones\\detallesfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\detallesfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\gui\\guigestiones\\listaconsulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\listaconsulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guigestiones\\facturagestion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\facturagestion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\gui\\guigestiones\\listamedicamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\listamedicamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{422E587E-714C-4F15-B6E9-0C1652EF6D5F}|Principal\\Principal.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\principal\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\gui\\guigestiones\\listapaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\listapaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\gui\\guigestiones\\facturagestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\facturagestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\gui\\guiedicion\\facturaedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guiedicion\\facturaedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{422E587E-714C-4F15-B6E9-0C1652EF6D5F}|Principal\\Principal.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\principal\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{422E587E-714C-4F15-B6E9-0C1652EF6D5F}|Principal\\Principal.csproj|solutionrelative:principal\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{422E587E-714C-4F15-B6E9-0C1652EF6D5F}|Principal\\Principal.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\principal\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{422E587E-714C-4F15-B6E9-0C1652EF6D5F}|Principal\\Principal.csproj|solutionrelative:principal\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D50295D-8379-4628-9D89-A9DF19EAC0ED}|DataLayer\\DataLayer.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\datalayer\\dboperaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\gui\\guigestiones\\facturagestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\facturagestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\gui\\guigestiones\\listamedicamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\listamedicamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\gui\\guigestiones\\listapaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\listapaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\gui\\guigestiones\\listaconsulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\listaconsulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\cls\\medicamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\cls\\medicamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\gui\\guigestiones\\facturagestion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\facturagestion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D50295D-8379-4628-9D89-A9DF19EAC0ED}|DataLayer\\DataLayer.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\datalayer\\dboperaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D50295D-8379-4628-9D89-A9DF19EAC0ED}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\dboperaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D50295D-8379-4628-9D89-A9DF19EAC0ED}|DataLayer\\DataLayer.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\datalayer\\dbconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D50295D-8379-4628-9D89-A9DF19EAC0ED}|DataLayer\\DataLayer.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\datalayer\\dbconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D50295D-8379-4628-9D89-A9DF19EAC0ED}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\dbconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guiedicion\\facturaedicion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\gui\\guiedicion\\facturaedicion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guiedicion\\facturaedicion.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Videos\\Clinica_Medica\\general\\gui\\guigestiones\\prueba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\general\\gui\\guigestiones\\prueba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\prueba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -110,100 +110,202 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FacturaGestion.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\FacturaGestion.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\FacturaGestion.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\FacturaGestion.cs",
-              "RelativeToolTip": "General\\GUI\\GUIGestiones\\FacturaGestion.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAvwFQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T01:05:26.004Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FacturaEdicion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIEdicion\\FacturaEdicion.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\GUIEdicion\\FacturaEdicion.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIEdicion\\FacturaEdicion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "General\\GUI\\GUIEdicion\\FacturaEdicion.cs [Dise\u00F1o]",
+              "Title": "Consulta.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\DataLayer\\Consulta.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Consulta.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\DataLayer\\Consulta.cs",
+              "RelativeToolTip": "DataLayer\\Consulta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T01:02:17.446Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-11-13T21:56:38.087Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FacturaEdicion.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIEdicion\\FacturaEdicion.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\GUIEdicion\\FacturaEdicion.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIEdicion\\FacturaEdicion.cs",
-              "RelativeToolTip": "General\\GUI\\GUIEdicion\\FacturaEdicion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T02:36:31.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ControladorDetalle.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\Controladores\\ControladorDetalle.cs",
-              "RelativeDocumentMoniker": "General\\Controladores\\ControladorDetalle.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\Controladores\\ControladorDetalle.cs",
-              "RelativeToolTip": "General\\Controladores\\ControladorDetalle.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwDgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T20:19:35.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ControladorFactura.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\Controladores\\ControladorFactura.cs",
-              "RelativeDocumentMoniker": "General\\Controladores\\ControladorFactura.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\Controladores\\ControladorFactura.cs",
-              "RelativeToolTip": "General\\Controladores\\ControladorFactura.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T00:31:17.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FacturaGestion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\FacturaGestion.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\FacturaGestion.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\FacturaGestion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "General\\GUI\\GUIGestiones\\FacturaGestion.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T01:06:17.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Factura.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\CLS\\Factura.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\CLS\\Factura.cs",
               "RelativeDocumentMoniker": "General\\CLS\\Factura.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\CLS\\Factura.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\CLS\\Factura.cs",
               "RelativeToolTip": "General\\CLS\\Factura.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAUwHYAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAiwIIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T18:54:09.412Z"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FacturaDetalle.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\CLS\\FacturaDetalle.cs",
+              "RelativeDocumentMoniker": "General\\CLS\\FacturaDetalle.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\CLS\\FacturaDetalle.cs",
+              "RelativeToolTip": "General\\CLS\\FacturaDetalle.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAuwB4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T21:00:30.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ControladorFactura.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\Controladores\\ControladorFactura.cs",
+              "RelativeDocumentMoniker": "General\\Controladores\\ControladorFactura.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\Controladores\\ControladorFactura.cs",
+              "RelativeToolTip": "General\\Controladores\\ControladorFactura.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAIwGIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T00:31:17.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ControladorDetalle.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\Controladores\\ControladorDetalle.cs",
+              "RelativeDocumentMoniker": "General\\Controladores\\ControladorDetalle.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\Controladores\\ControladorDetalle.cs",
+              "RelativeToolTip": "General\\Controladores\\ControladorDetalle.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wDgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T20:19:35.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FacturaEdicion.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIEdicion\\FacturaEdicion.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GUIEdicion\\FacturaEdicion.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIEdicion\\FacturaEdicion.cs",
+              "RelativeToolTip": "General\\GUI\\GUIEdicion\\FacturaEdicion.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAUwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T02:36:31.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "visorMedicamentos.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\Reportes\\GUI\\visorMedicamentos.cs",
+              "RelativeDocumentMoniker": "Reportes\\GUI\\visorMedicamentos.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\Reportes\\GUI\\visorMedicamentos.cs",
+              "RelativeToolTip": "Reportes\\GUI\\visorMedicamentos.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAQwCMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T17:19:44.054Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ListaMedicamentos.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaMedicamentos.cs",
+              "Title": "visorFactura.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\Reportes\\GUI\\visorFactura.cs",
+              "RelativeDocumentMoniker": "Reportes\\GUI\\visorFactura.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\Reportes\\GUI\\visorFactura.cs",
+              "RelativeToolTip": "Reportes\\GUI\\visorFactura.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAiwBkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T17:19:30.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ListaConsulta.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaConsulta.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\ListaConsulta.cs",
+              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaConsulta.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaConsulta.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T17:14:06.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ListaMedicamentos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaMedicamentos.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\ListaMedicamentos.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaMedicamentos.cs",
+              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaMedicamentos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaMedicamentos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T18:28:23.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FacturaGestion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\FacturaGestion.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\FacturaGestion.cs",
+              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\FacturaGestion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\FacturaGestion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T01:06:17.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ListaPaciente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaPaciente.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\ListaPaciente.cs",
+              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaPaciente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaPaciente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T22:59:40.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FacturaEdicion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIEdicion\\FacturaEdicion.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GUIEdicion\\FacturaEdicion.cs",
+              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIEdicion\\FacturaEdicion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Videos\\Clinica_Medica\\General\\GUI\\GUIEdicion\\FacturaEdicion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T01:02:17.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Principal.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\Principal\\Principal.cs",
+              "RelativeDocumentMoniker": "Principal\\Principal.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\Principal\\Principal.cs",
+              "RelativeToolTip": "Principal\\Principal.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAIwMUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T15:55:07.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Principal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\Principal\\Principal.cs",
+              "RelativeDocumentMoniker": "Principal\\Principal.cs",
+              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\Principal\\Principal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Videos\\Clinica_Medica\\Principal\\Principal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T00:52:03.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FacturaGestion.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\FacturaGestion.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\FacturaGestion.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\FacturaGestion.cs",
+              "RelativeToolTip": "General\\GUI\\GUIGestiones\\FacturaGestion.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAA2wDYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T01:05:26.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ListaMedicamentos.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaMedicamentos.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\ListaMedicamentos.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaMedicamentos.cs",
               "RelativeToolTip": "General\\GUI\\GUIGestiones\\ListaMedicamentos.cs",
               "ViewState": "AgIAAFYAAAAAAAAAAAAAwAgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -211,11 +313,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "ListaConsulta.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaConsulta.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaConsulta.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\ListaConsulta.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaConsulta.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaConsulta.cs",
               "RelativeToolTip": "General\\GUI\\GUIGestiones\\ListaConsulta.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAWwBYAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -223,11 +325,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "ListaPaciente.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaPaciente.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaPaciente.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\ListaPaciente.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaPaciente.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaPaciente.cs",
               "RelativeToolTip": "General\\GUI\\GUIGestiones\\ListaPaciente.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAC0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -235,68 +337,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ListaPaciente.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaPaciente.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\ListaPaciente.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaPaciente.cs [Dise\u00F1o]",
-              "RelativeToolTip": "General\\GUI\\GUIGestiones\\ListaPaciente.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T22:59:40.799Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ListaMedicamentos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaMedicamentos.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\ListaMedicamentos.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaMedicamentos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "General\\GUI\\GUIGestiones\\ListaMedicamentos.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T18:28:23.037Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ListaConsulta.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaConsulta.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\ListaConsulta.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\ListaConsulta.cs [Dise\u00F1o]",
-              "RelativeToolTip": "General\\GUI\\GUIGestiones\\ListaConsulta.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T17:14:06.395Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Consulta.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\DataLayer\\Consulta.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Consulta.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\DataLayer\\Consulta.cs",
-              "RelativeToolTip": "DataLayer\\Consulta.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAADwv94AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T21:56:38.087Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FacturaDetalle.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\CLS\\FacturaDetalle.cs",
-              "RelativeDocumentMoniker": "General\\CLS\\FacturaDetalle.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\CLS\\FacturaDetalle.cs",
-              "RelativeToolTip": "General\\CLS\\FacturaDetalle.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowB4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T21:00:30.023Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Medicamento.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\CLS\\Medicamento.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\CLS\\Medicamento.cs",
               "RelativeDocumentMoniker": "General\\CLS\\Medicamento.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\CLS\\Medicamento.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\CLS\\Medicamento.cs",
               "RelativeToolTip": "General\\CLS\\Medicamento.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -304,46 +349,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Paciente.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\CLS\\Paciente.cs",
-              "RelativeDocumentMoniker": "General\\CLS\\Paciente.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\CLS\\Paciente.cs",
-              "RelativeToolTip": "General\\CLS\\Paciente.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAqwFAAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T21:10:32.117Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DetallesFactura.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\DetallesFactura.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\DetallesFactura.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\DetallesFactura.cs [Dise\u00F1o]",
-              "RelativeToolTip": "General\\GUI\\GUIGestiones\\DetallesFactura.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T00:17:40.742Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DetallesFactura.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\DetallesFactura.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\DetallesFactura.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\DetallesFactura.cs",
-              "RelativeToolTip": "General\\GUI\\GUIGestiones\\DetallesFactura.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA7wAoAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T03:23:19.309Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "FacturaGestion.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\FacturaGestion.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\FacturaGestion.Designer.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\FacturaGestion.Designer.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\FacturaGestion.Designer.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\FacturaGestion.Designer.cs",
               "RelativeToolTip": "General\\GUI\\GUIGestiones\\FacturaGestion.Designer.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAD4v1IAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -351,22 +361,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Principal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\Principal\\Principal.cs",
-              "RelativeDocumentMoniker": "Principal\\Principal.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\Principal\\Principal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Principal\\Principal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T00:52:03.462Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 21,
               "Title": "DBOperaciones.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\DataLayer\\DBOperaciones.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\DataLayer\\DBOperaciones.cs",
               "RelativeDocumentMoniker": "DataLayer\\DBOperaciones.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\DataLayer\\DBOperaciones.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\DataLayer\\DBOperaciones.cs",
               "RelativeToolTip": "DataLayer\\DBOperaciones.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAqwFIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -376,9 +375,9 @@
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "DBConexion.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\DataLayer\\DBConexion.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\DataLayer\\DBConexion.cs",
               "RelativeDocumentMoniker": "DataLayer\\DBConexion.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\DataLayer\\DBConexion.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\DataLayer\\DBConexion.cs",
               "RelativeToolTip": "DataLayer\\DBConexion.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -388,23 +387,22 @@
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": "FacturaEdicion.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIEdicion\\FacturaEdicion.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIEdicion\\FacturaEdicion.Designer.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GUIEdicion\\FacturaEdicion.Designer.cs",
-              "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIEdicion\\FacturaEdicion.Designer.cs",
+              "ToolTip": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIEdicion\\FacturaEdicion.Designer.cs",
               "RelativeToolTip": "General\\GUI\\GUIEdicion\\FacturaEdicion.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T17:58:39.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T17:58:39.577Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
               "Title": "prueba.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\prueba.cs",
+              "DocumentMoniker": "C:\\Users\\halle\\Music\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\prueba.cs",
               "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\prueba.cs",
               "ToolTip": "C:\\Users\\halle\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\prueba.cs [Dise\u00F1o]",
-              "RelativeToolTip": "General\\GUI\\GUIGestiones\\prueba.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Videos\\Clinica_Medica\\General\\GUI\\GUIGestiones\\prueba.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T17:14:30.627Z"
             }
