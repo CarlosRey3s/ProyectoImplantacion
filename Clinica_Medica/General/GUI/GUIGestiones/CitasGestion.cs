@@ -160,8 +160,7 @@ namespace General.GUI.GUIGestiones
         }
         private void btnFactura_Click(object sender, EventArgs e)
         {
-            FacturaGestion c = new FacturaGestion();
-            c.ShowDialog();
+           
         }
         private void ContarEmpleados()
         {

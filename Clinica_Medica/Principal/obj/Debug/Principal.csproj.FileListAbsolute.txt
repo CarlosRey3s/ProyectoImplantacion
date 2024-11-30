@@ -513,6 +513,11 @@ C:\Users\hvale\Downloads\ProyectoImplantacion\Clinica_Medica\Principal\obj\Debug
 C:\Users\hvale\Downloads\ProyectoImplantacion\Clinica_Medica\Principal\obj\Debug\Principal.csproj.CopyComplete
 C:\Users\hvale\Downloads\ProyectoImplantacion\Clinica_Medica\Principal\obj\Debug\Principal.exe
 C:\Users\hvale\Downloads\ProyectoImplantacion\Clinica_Medica\Principal\obj\Debug\Principal.pdb
+C:\Users\ccerr\Downloads\Clinica_Medica\Clinica_Medica\Principal\obj\Debug\Principal.csproj.AssemblyReference.cache
+C:\Users\ccerr\Downloads\Clinica_Medica\Clinica_Medica\Principal\obj\Debug\Principal.csproj.SuggestedBindingRedirects.cache
+C:\Users\ccerr\Downloads\Clinica_Medica\Clinica_Medica\Principal\obj\Debug\Principal.exe.config
+C:\Users\ccerr\Downloads\Clinica_Medica\Clinica_Medica\Principal\obj\Debug\Principal.exe
+C:\Users\ccerr\Downloads\Clinica_Medica\Clinica_Medica\Principal\obj\Debug\Principal.pdb
 C:\Users\ccerr\Documents\Git y Github\parte de la valeria\ProyectoImplantacion\Clinica_Medica\Principal\obj\Debug\Principal.csproj.AssemblyReference.cache
 C:\Users\ccerr\Documents\Git y Github\parte de la valeria\ProyectoImplantacion\Clinica_Medica\Principal\obj\Debug\Principal.csproj.SuggestedBindingRedirects.cache
 C:\Users\ccerr\Documents\Git y Github\parte de la valeria\ProyectoImplantacion\Clinica_Medica\Principal\obj\Debug\Principal.exe.config
