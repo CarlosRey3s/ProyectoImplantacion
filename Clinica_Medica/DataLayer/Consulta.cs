@@ -11,57 +11,12 @@ namespace DataLayer
 {
     public class Consulta
     {
-        public static DataTable AsignacionMedicamento(int consultafactura)
-        {
-            DataTable Resultado = new DataTable();
-
-            String Consulta = "CALL ObtenerAsignacionMedicamentoPorConsulta(" + consultafactura + ");";
-            DBOperaciones operacion = new DBOperaciones();
-            try
-            {
-                Resultado = operacion.Consultar(Consulta);
-            }
-            catch (Exception)
-            { }
-            return Resultado;
-
-        }
-
-        public static DataTable ObternerDetalleFac(int IDfactura)
-        {
-            DataTable Resultado = new DataTable();
-
-            String Consulta = "CALL sp_ObtenerDetallesFactura(" + IDfactura + ");";
-            DBOperaciones operacion = new DBOperaciones();
-            try
-            {
-                Resultado = operacion.Consultar(Consulta);
-            }
-            catch (Exception)
-            { }
-            return Resultado;
-
-        }
-
-        public static DataTable Paciente_vw()
-        {
-
-            DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT * FROM vw_Pacientes";
-            DBOperaciones operacion = new DBOperaciones();
-            try
-            {
-                Resultado = operacion.Consultar(Consulta);
-            }
-            catch (Exception)
-            { }
-            return Resultado;
-        }
         public static DataTable Paciente()
         {
             // Linea2 -> agregue la line d.linea2
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT * FROM bdclinicamedica.cm_pacientes;";
+            String Consulta = @"Select p.ID_Paciente, p.Nombre, p.Apellido, p.FechaNacimiento,
+            p.Genero,p.Telefono, p.CorreoElectronico, p.Direccion  from pacientes p";
             DBOperaciones operacion = new DBOperaciones();
             try
             {
@@ -186,11 +141,10 @@ namespace DataLayer
             return Resultado;
         }
 
-        
-        public static DataTable MedicamentosV2()
+        public static DataTable Opciones()
         {
             DataTable Resultado = new DataTable();
-            string Consulta = "SELECT * FROM bdclinicamedica.cm_medicamentos; ";
+            String Consulta = @"SELECT ID_Opcion, NombreOpcion FROM Opciones;";
             DBOperaciones operacion = new DBOperaciones();
 
             try
@@ -204,10 +158,27 @@ namespace DataLayer
             }
             return Resultado;
         }
-        public static DataTable spConsulta()
+        public static DataTable VerPermisos()
         {
             DataTable Resultado = new DataTable();
-            string Consulta = "CALL sp_ObtenerDatosConsulta();";
+            string Consulta = @"SELECT NombreRol, NombreOpcion FROM verPermisos;";
+            DBOperaciones operacion = new DBOperaciones();
+
+            try
+            {
+                Resultado = operacion.Consultar(Consulta);
+            }
+            catch (Exception ex)
+            {
+                // Manejo de la excepción
+                Console.WriteLine(ex.Message);
+            }
+            return Resultado;
+        }
+        public static DataTable Medicamentos()
+        {
+            DataTable Resultado = new DataTable();
+            string Consulta = @"SELECT ID_Insumo, NombreInsumo, Descripcion, CantidadDisponible, PrecioUnitario, Proveedor, FechaVencimiento, ImagenMedicamento FROM Medicamentos;";
             DBOperaciones operacion = new DBOperaciones();
 
             try
@@ -222,9 +193,26 @@ namespace DataLayer
             return Resultado;
         }
 
+        public static DataTable Citas()
+        {
+            DataTable Resultado = new DataTable();
 
-        
-        
+            String Consulta = @"SELECT c.ID_Cita,c.ID_Paciente, p.NombresPaciente, p.ApellidosPaciente, c.Fecha_Hora FROM Citas c JOIN Pacientes p ON c.ID_Paciente = p.ID_Paciente ORDER BY ID_Cita ASC";
+            DBOperaciones operacion = new DBOperaciones();
+
+            try
+            {
+                Resultado = operacion.Consultar(Consulta);
+
+            }
+            catch (Exception ex)
+            {
+                // Manejo de la excepción
+                Console.WriteLine(ex.Message);
+            }
+            return Resultado;
+        }
+
         public static DataTable ConsultaMedicas()
         {
             DataTable Resultado = new DataTable();
@@ -299,7 +287,25 @@ namespace DataLayer
         {
             DataTable Resultado = new DataTable();
 
-            String Consulta = "SELECT * FROM vw_Facturas;";
+            String Consulta = @"
+                        SELECT 
+                            f.ID_Factura,
+                            f.ID_Consulta,
+                            f.Concepto,
+                            f.Monto,
+                            f.FechaEmision,
+                            f.FechaPago,
+                            f.MetodoPago,
+                            f.SubTotal,
+                            f.Total,
+                            m.NombreInsumo AS NombreMedicamento,
+                            m.PrecioUnitario AS Precio
+                        FROM 
+                            Factura f
+                        JOIN 
+                            Medicamentos m ON m.ID_Insumo = m.ID_Insumo 
+                        ORDER BY 
+                            f.ID_Factura ASC;";
 
             DBOperaciones operacion = new DBOperaciones();
 
@@ -315,26 +321,7 @@ namespace DataLayer
 
             return Resultado;
         }
-        public static DataTable DetallesFactura()
-        {
-            DataTable Resultado = new DataTable();
 
-            String Consulta = "SELECT * FROM clinicamedica.detallefacturas;";
-
-            DBOperaciones operacion = new DBOperaciones();
-
-            try
-            {
-                Resultado = operacion.Consultar(Consulta);
-            }
-            catch (Exception ex)
-            {
-                // Manejar la excepción
-                Console.WriteLine("Error en la consulta de facturas: " + ex.Message);
-            }
-
-            return Resultado;
-        }
 
 
         public static DataTable MedicamentosSegunPeriodo(string pFechaInicio, string pFechaFinal)
@@ -413,6 +400,51 @@ namespace DataLayer
             return Resultado;
         }
 
-   
+        public static DataTable CITAS_SEGUN_PERIODO(string pFechaInicio, string pFechaFinal)
+        {
+            DataTable Resultado = new DataTable();
+
+            String Consulta = @"
+            SELECT 
+                CI.ID_Cita AS CitaID, 
+                CI.Fecha_Hora AS FechaHoraCita, 
+                CONCAT(P.NombresPaciente, ' ', P.ApellidosPaciente) AS PacienteNombreCompleto, 
+                CONCAT(D.NombresEmpleado, ' ', D.ApellidosEmpleado) AS DoctorNombreCompleto,
+                E.Especialidad AS EspecialidadDoctor,
+                CASE 
+                    WHEN CU.ID_Consulta IS NOT NULL THEN 'Atendida'
+                    ELSE 'Pendiente'
+                END AS EstadoCita
+            FROM 
+                Citas CI
+            JOIN 
+                Pacientes P ON CI.ID_Paciente = P.ID_Paciente
+            LEFT JOIN 
+                Consulta CU ON CI.ID_Cita = CU.ID_Cita
+            LEFT JOIN 
+                Doctor DOC ON CU.ID_Doctor = DOC.ID_Doctor
+            LEFT JOIN 
+                Empleados D ON DOC.ID_Empleado = D.ID_Empleado
+            LEFT JOIN 
+                Especialidad E ON DOC.ID_Especialidad = E.ID_Especialidad 
+            WHERE 
+                CAST(CI.Fecha_Hora AS DATE) BETWEEN '" + pFechaInicio + @"' AND '" + pFechaFinal + @"'
+            ORDER BY
+                  CI.Fecha_Hora DESC; ";
+            DBOperaciones operacion = new DBOperaciones();
+
+            try
+            {
+                Resultado = operacion.Consultar(Consulta);
+
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+            return Resultado;
+        }
     }
 }

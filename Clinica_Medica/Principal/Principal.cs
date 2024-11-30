@@ -67,6 +67,7 @@ namespace Principal
 
             Reportes.GUI.visorMedicamentos f = new visorMedicamentos();
             Reportes.GUI.visorFactura factura = new visorFactura();//ESTA COMENTADO POR QUE EL REPORTE NO EXITE AQUI 
+            Reportes.GUI.visorCitas cita = new visorCitas();
             //SE TIENE QUE CREAR 
             ContextMenuStrip contextMenu = new ContextMenuStrip();
 
@@ -78,6 +79,7 @@ namespace Principal
             // Asinga los valores a boton que se creo anteriormente
             nuevoMenuItem.Click += (s, ev) => OpenFroms(f); // mostrara el primer reporte  solo ponele el objeto que crearte 
             facturaITem.Click += (s, ev) => OpenFroms(factura); // cambia la f por la variable del objeto que se creo para mostrar el reporte
+            salirMenuItem.Click += (s, ev) => OpenFroms(cita);  // cambia la f por la variable del objeto que se creo para mostrar el reporte
 
             // No tocar nada ya que aui manda a llarmlo para mostrar y ejecuta todo si se mueve valio
             contextMenu.Items.Add(nuevoMenuItem);
@@ -100,7 +102,10 @@ namespace Principal
         }
         private void btnPacientes_Click(object sender, EventArgs e)
         {
-            
+            pictureBox2.Image = btnPacientes.Image;
+            TituloBarra.Text = btnPacientes.Text;
+            PacientesGestion home = new PacientesGestion();
+            OpenFroms(home);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -150,22 +155,34 @@ namespace Principal
 
         private void btnDoctores_Click(object sender, EventArgs e)
         {
-            
+            pictureBox2.Image = btnDoctores.Image; // selecciona la imagen que esta en el boton
+            TituloBarra.Text = btnDoctores.Text;
+            DoctoresGestion doctores = new DoctoresGestion();
+            OpenFroms(doctores);
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            
+            pictureBox2.Image = btnEmpleados.Image; // selecciona la imagen que esta en el boton
+            TituloBarra.Text = btnEmpleados.Text;
+            EmpleadosGestion empleados = new EmpleadosGestion();
+            OpenFroms(empleados);
         }
 
         private void btnMedicamentos_Click(object sender, EventArgs e)
         {
-            
+            pictureBox2.Image = btnMedicamentos.Image; // selecciona la imagen que esta en el boton
+            TituloBarra.Text = btnMedicamentos.Text;
+            MedicamentoGestion medicamento = new MedicamentoGestion();
+            OpenFroms(medicamento);
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            
+            pictureBox2.Image = btnUsuarios.Image; // selecciona la imagen que esta en el boton
+            TituloBarra.Text = btnUsuarios.Text;
+            UsuariosGestion usuario = new UsuariosGestion();
+            OpenFroms(usuario);
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
@@ -180,15 +197,6 @@ namespace Principal
 
 
 
-
-        }
-
-        private void btnFactura_Click(object sender, EventArgs e)
-        {
-            pictureBox2.Image = btnFactura.Image; // selecciona la imagen que esta en el boton
-            TituloBarra.Text = btnFactura.Text;
-            FacturaGestion factura = new FacturaGestion();
-            OpenFroms(factura);
 
         }
     }
