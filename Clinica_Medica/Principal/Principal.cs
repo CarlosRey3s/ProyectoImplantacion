@@ -95,10 +95,7 @@ namespace Principal
         {
             //  pictureBox2.Image = Image.FromFile("C:\\Users\\ccerr\\Documents\\Iconos\\casa.png");
 
-            pictureBox2.Image = btnDasdoard.Image; // selecciona la imagen que esta en el boton
-            TituloBarra.Text = btnDasdoard.Text;
-            prueba home = new prueba();
-            OpenFroms(home);
+           
         }
         private void btnPacientes_Click(object sender, EventArgs e)
         {
@@ -115,7 +112,10 @@ namespace Principal
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-
+            pictureBox2.Image = btnCitas.Image;
+            TituloBarra.Text = btnCitas.Text;
+            CitasGestion home = new CitasGestion();
+            OpenFroms(home);
         }
         //Drag form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -155,34 +155,22 @@ namespace Principal
 
         private void btnDoctores_Click(object sender, EventArgs e)
         {
-            pictureBox2.Image = btnDoctores.Image; // selecciona la imagen que esta en el boton
-            TituloBarra.Text = btnDoctores.Text;
-            DoctoresGestion doctores = new DoctoresGestion();
-            OpenFroms(doctores);
+            
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            pictureBox2.Image = btnEmpleados.Image; // selecciona la imagen que esta en el boton
-            TituloBarra.Text = btnEmpleados.Text;
-            EmpleadosGestion empleados = new EmpleadosGestion();
-            OpenFroms(empleados);
+          
         }
 
         private void btnMedicamentos_Click(object sender, EventArgs e)
         {
-            pictureBox2.Image = btnMedicamentos.Image; // selecciona la imagen que esta en el boton
-            TituloBarra.Text = btnMedicamentos.Text;
-            MedicamentoGestion medicamento = new MedicamentoGestion();
-            OpenFroms(medicamento);
+           
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            pictureBox2.Image = btnUsuarios.Image; // selecciona la imagen que esta en el boton
-            TituloBarra.Text = btnUsuarios.Text;
-            UsuariosGestion usuario = new UsuariosGestion();
-            OpenFroms(usuario);
+            
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)

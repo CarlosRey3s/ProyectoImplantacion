@@ -20,7 +20,7 @@ namespace DataLayer
             try
             {
                 //Cadena - PC DeAsis
-                _CONEXION.ConnectionString = "Server=localhost;Port = 3306;Database=clinicamedica;Uid = root; Pwd = 1234;SSL Mode = None";
+                _CONEXION.ConnectionString = "Server=localhost;Port=3306;Database=bdclinicamedica;Uid=root;Pwd=12345;SSL Mode=None";
                 _CONEXION.Open();
                 Resultado = true;
             }

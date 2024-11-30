@@ -1,18 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ccerr\\Documents\\Git y Github\\ClinicaMedica_Implantacion-main\\ClinicaMedica_Implantacion-main\\Clinica_Medica\\",
+  "WorkspaceRootPath": "C:\\Users\\ccerr\\Documents\\Git y Github\\parte de la valeria\\ProyectoImplantacion\\Clinica_Medica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|c:\\users\\ccerr\\documents\\git y github\\clinicamedica_implantacion-main\\clinicamedica_implantacion-main\\clinica_medica\\general\\gui\\guigestiones\\pacientesgestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\pacientesgestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{422E587E-714C-4F15-B6E9-0C1652EF6D5F}|Principal\\Principal.csproj|c:\\users\\ccerr\\documents\\git y github\\parte de la valeria\\proyectoimplantacion\\clinica_medica\\principal\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{422E587E-714C-4F15-B6E9-0C1652EF6D5F}|Principal\\Principal.csproj|solutionrelative:principal\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|c:\\users\\ccerr\\documents\\git y github\\clinicamedica_implantacion-main\\clinicamedica_implantacion-main\\clinica_medica\\general\\cls\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|c:\\users\\ccerr\\documents\\git y github\\parte de la valeria\\proyectoimplantacion\\clinica_medica\\general\\gui\\guigestiones\\citasgestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\citasgestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|c:\\users\\ccerr\\documents\\git y github\\parte de la valeria\\proyectoimplantacion\\clinica_medica\\general\\gui\\guigestiones\\verpermisos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\gui\\guigestiones\\verpermisos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|c:\\users\\ccerr\\documents\\git y github\\parte de la valeria\\proyectoimplantacion\\clinica_medica\\general\\cls\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\cls\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{422E587E-714C-4F15-B6E9-0C1652EF6D5F}|Principal\\Principal.csproj|C:\\Users\\ccerr\\Documents\\Git y Github\\ClinicaMedica_Implantacion-main\\ClinicaMedica_Implantacion-main\\Clinica_Medica\\principal\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{422E587E-714C-4F15-B6E9-0C1652EF6D5F}|Principal\\Principal.csproj|solutionrelative:principal\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|c:\\users\\ccerr\\documents\\git y github\\parte de la valeria\\proyectoimplantacion\\clinica_medica\\general\\cls\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990BC726-3CB9-42A2-9B26-86980BEC4296}|General\\General.csproj|solutionrelative:general\\cls\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,45 +29,76 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 334,
-          "SelectedChildIndex": 0,
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PacientesGestion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\ccerr\\Documents\\Git y Github\\ClinicaMedica_Implantacion-main\\ClinicaMedica_Implantacion-main\\Clinica_Medica\\General\\GUI\\GUIGestiones\\PacientesGestion.cs",
-              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\PacientesGestion.cs",
-              "ToolTip": "C:\\Users\\ccerr\\Documents\\Git y Github\\ClinicaMedica_Implantacion-main\\ClinicaMedica_Implantacion-main\\Clinica_Medica\\General\\GUI\\GUIGestiones\\PacientesGestion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "General\\GUI\\GUIGestiones\\PacientesGestion.cs [Dise\u00F1o]",
+              "Title": "Principal.cs",
+              "DocumentMoniker": "C:\\Users\\ccerr\\Documents\\Git y Github\\parte de la valeria\\ProyectoImplantacion\\Clinica_Medica\\Principal\\Principal.cs",
+              "RelativeDocumentMoniker": "Principal\\Principal.cs",
+              "ToolTip": "C:\\Users\\ccerr\\Documents\\Git y Github\\parte de la valeria\\ProyectoImplantacion\\Clinica_Medica\\Principal\\Principal.cs",
+              "RelativeToolTip": "Principal\\Principal.cs",
+              "ViewState": "AgIAAKoAAAAAAAAAAIA3wKwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T04:12:40.728Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-11-30T21:46:59.57Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "C:\\Users\\ccerr\\Documents\\Git y Github\\ClinicaMedica_Implantacion-main\\ClinicaMedica_Implantacion-main\\Clinica_Medica\\General\\CLS\\Doctor.cs",
-              "RelativeDocumentMoniker": "General\\CLS\\Doctor.cs",
-              "ToolTip": "C:\\Users\\ccerr\\Documents\\Git y Github\\ClinicaMedica_Implantacion-main\\ClinicaMedica_Implantacion-main\\Clinica_Medica\\General\\CLS\\Doctor.cs",
-              "RelativeToolTip": "General\\CLS\\Doctor.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAADwvzkAAAAqAAAAAAAAAA==",
+              "Title": "CitasGestion.cs",
+              "DocumentMoniker": "C:\\Users\\ccerr\\Documents\\Git y Github\\parte de la valeria\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\CitasGestion.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\CitasGestion.cs",
+              "ToolTip": "C:\\Users\\ccerr\\Documents\\Git y Github\\parte de la valeria\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\CitasGestion.cs",
+              "RelativeToolTip": "General\\GUI\\GUIGestiones\\CitasGestion.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAEwKIAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T04:10:32.453Z",
+              "WhenOpened": "2024-11-30T21:46:46.745Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Principal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\ccerr\\Documents\\Git y Github\\ClinicaMedica_Implantacion-main\\ClinicaMedica_Implantacion-main\\Clinica_Medica\\Principal\\Principal.cs",
-              "RelativeDocumentMoniker": "Principal\\Principal.cs",
-              "ToolTip": "C:\\Users\\ccerr\\Documents\\Git y Github\\ClinicaMedica_Implantacion-main\\ClinicaMedica_Implantacion-main\\Clinica_Medica\\Principal\\Principal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Principal\\Principal.cs [Dise\u00F1o]",
+              "Title": "VerPermisos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ccerr\\Documents\\Git y Github\\parte de la valeria\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\VerPermisos.cs",
+              "RelativeDocumentMoniker": "General\\GUI\\GUIGestiones\\VerPermisos.cs",
+              "ToolTip": "C:\\Users\\ccerr\\Documents\\Git y Github\\parte de la valeria\\ProyectoImplantacion\\Clinica_Medica\\General\\GUI\\GUIGestiones\\VerPermisos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "General\\GUI\\GUIGestiones\\VerPermisos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:33:20.961Z",
+              "WhenOpened": "2024-11-30T21:42:22.91Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\Users\\ccerr\\Documents\\Git y Github\\parte de la valeria\\ProyectoImplantacion\\Clinica_Medica\\General\\CLS\\Doctor.cs",
+              "RelativeDocumentMoniker": "General\\CLS\\Doctor.cs",
+              "ToolTip": "C:\\Users\\ccerr\\Documents\\Git y Github\\parte de la valeria\\ProyectoImplantacion\\Clinica_Medica\\General\\CLS\\Doctor.cs",
+              "RelativeToolTip": "General\\CLS\\Doctor.cs",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:40:41.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Paciente.cs",
+              "DocumentMoniker": "C:\\Users\\ccerr\\Documents\\Git y Github\\parte de la valeria\\ProyectoImplantacion\\Clinica_Medica\\General\\CLS\\Paciente.cs",
+              "RelativeDocumentMoniker": "General\\CLS\\Paciente.cs",
+              "ToolTip": "C:\\Users\\ccerr\\Documents\\Git y Github\\parte de la valeria\\ProyectoImplantacion\\Clinica_Medica\\General\\CLS\\Paciente.cs",
+              "RelativeToolTip": "General\\CLS\\Paciente.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:40:15.456Z",
+              "EditorCaption": ""
             }
           ]
         }

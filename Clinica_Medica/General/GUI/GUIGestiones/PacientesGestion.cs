@@ -15,34 +15,33 @@ namespace General.GUI.GUIGestiones
     public partial class PacientesGestion : Form
     {
         BindingSource _DATOS = new BindingSource();
+
         private void Cargar()
         {
             try
             {
-               _DATOS.DataSource = DataLayer.Consulta.Paciente();
-                dgvPacientes.DataSource = _DATOS;
-                dgvPacientes.AutoGenerateColumns = false;
+                _DATOS.DataSource = DataLayer.Consulta.Paciente();
+                FiltrarLocalmente();
             }
             catch (Exception)
-            {}
+            {
+                
+            }
         }
+
         private void FiltrarLocalmente()
         {
             try
             {
-                // Obtener el texto ingresado en el cuadro de texto de filtro
-                string filtro = txtFiltro.Text.Trim();
-                // Filtrar los datos en función del texto ingresado
-                if (filtro.Length <= 0)
+                if (txtFiltro.Text.Trim().Length <= 0)
                 {
                     _DATOS.RemoveFilter();
                 }
                 else
                 {
-                    // Construir la expresión de filtro para filtrar por nombre de usuario
-                    string filtroExpresion = $"Nombre LIKE '%{filtro}%'";
-                    // Aplicar el filtro
-                    _DATOS.Filter = filtroExpresion;
+                    string filtro = txtFiltro.Text.Trim();
+                    _DATOS.Filter = $"[Pac_Nombre] LIKE '%{filtro}%'";
+
                 }
                 dgvPacientes.AutoGenerateColumns = false;
                 dgvPacientes.DataSource = _DATOS;
@@ -53,82 +52,139 @@ namespace General.GUI.GUIGestiones
                 MessageBox.Show("Ocurrió un error al filtrar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public PacientesGestion()
         {
             InitializeComponent();
-            Cargar();
         }
-        private void btnEditar_Click(object sender, EventArgs e)
-        {}
         private void PacientesGestion_Load(object sender, EventArgs e)
         {
             Cargar();
-            FiltrarLocalmente();
-            ContarEmpleados();
+            lblRegistros.Text = dgvPacientes.Rows.Count.ToString();
         }
+
         private void Insertar_Click(object sender, EventArgs e)
         {
-            PacientesEdicion P = new PacientesEdicion();
-            P.ShowDialog();
-            Cargar();
+            try
+            {
+                PacientesEdicion f = new PacientesEdicion();
+                f.ShowDialog();
+                Cargar();
+                lblRegistros.Text = dgvPacientes.Rows.Count.ToString();
+            }
+            catch (Exception)
+            {
+
+            }
         }
+
         private void Eliminar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (MessageBox.Show("¿Desea eliminar esta Cuenta?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                if (dgvPacientes.CurrentRow == null)
                 {
-                    Paciente f = new Paciente();
-                    f.ID_Paciente = Convert.ToInt32(dgvPacientes.CurrentRow.Cells["ID_Paciente"].Value.ToString());
-                    if (f.Eliminar())
+                    MessageBox.Show("No hay ninguna fila seleccionada.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (MessageBox.Show("¿Desea eliminar esta cuenta?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    // Obtener el ID del paciente seleccionado
+                    Paciente paciente = new Paciente();
+                    paciente.ID_Paciente = Convert.ToInt32(dgvPacientes.CurrentRow.Cells["ID_Paciente"].Value.ToString());
+
+                    // Intentar eliminar
+                    if (paciente.Eliminar())
                     {
-                        MessageBox.Show("Cuenta eliminada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Cuenta eliminada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar(); // Recargar los datos en el DataGridView
                     }
                     else
                     {
-                        MessageBox.Show("La cuenta no pudo ser eliminada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("La cuenta no pudo ser eliminada. Revisa si tiene dependencias en otras tablas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    Cargar();
                 }
-            }catch { }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
         private void Modificar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (MessageBox.Show("Desea modificar esta Cuenta?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (dgvPacientes.CurrentRow == null)
+                {
+                    MessageBox.Show("No hay ninguna fila seleccionada.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (MessageBox.Show("¿Desea modificar esta cuenta?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     PacientesEdicion pacientesEdicion = new PacientesEdicion();
+
+                    // Sincronizamos la información del DataGridView con el formulario de edición
                     pacientesEdicion.txtIdPaciente.Text = dgvPacientes.CurrentRow.Cells["ID_Paciente"].Value.ToString();
-                    pacientesEdicion.txtNombresPaciente.Text = dgvPacientes.CurrentRow.Cells["Nombre"].Value.ToString();
-                    pacientesEdicion.txtApellidosPaciente.Text = dgvPacientes.CurrentRow.Cells["Apellido"].Value.ToString();
-                    pacientesEdicion.dtpFechaNac.Text = dgvPacientes.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
-                    pacientesEdicion.cbGenero.Text = dgvPacientes.CurrentRow.Cells["Genero"].Value.ToString();
-                    pacientesEdicion.txtTelefono.Text = dgvPacientes.CurrentRow.Cells["Telefono"].Value.ToString();
-                    pacientesEdicion.txtCorreoElectronico.Text = dgvPacientes.CurrentRow.Cells["CorreoElectronico"].Value.ToString();
-                    pacientesEdicion.txtDireccion.Text = dgvPacientes.CurrentRow.Cells["Direccion"].Value.ToString();
-                    pacientesEdicion.Show();
+                    pacientesEdicion.txtNombresPaciente.Text = dgvPacientes.CurrentRow.Cells["Pac_Nombre"].Value.ToString();
+                    pacientesEdicion.txtApellidosPaciente.Text = dgvPacientes.CurrentRow.Cells["Pac_Apellido"].Value.ToString();
+                    pacientesEdicion.dtpFechaNac.Value = DateTime.Parse(dgvPacientes.CurrentRow.Cells["Pac_FechaNacimiento"].Value.ToString());
+                    pacientesEdicion.cbGenero.Text = dgvPacientes.CurrentRow.Cells["Pac_Genero"].Value.ToString();
+                    pacientesEdicion.txtTelefono.Text = dgvPacientes.CurrentRow.Cells["Pac_Telefono"].Value.ToString();
+                    pacientesEdicion.txtCorreoElectronico.Text = dgvPacientes.CurrentRow.Cells["Pac_CorreoElectronico"].Value.ToString();
+                    pacientesEdicion.txtDireccion.Text = dgvPacientes.CurrentRow.Cells["Pac_Direccion"].Value.ToString();
+
+                    pacientesEdicion.ShowDialog(); // Mostrar el formulario de edición
+
+                    // Recargar los datos después de cerrar el formulario de edición
                     Cargar();
                 }
-              
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void txtFiltro_Click(object sender, EventArgs e)
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
             FiltrarLocalmente();
         }
-        private void ContarEmpleados()
+
+        private void txtFiltro_Click(object sender, EventArgs e)
         {
-            int totalEmpleados = dgvPacientes.RowCount;
-            TotalEmpleados.Text = totalEmpleados.ToString();
+            // Implementación del evento Click del filtro
         }
+
         private void dgvPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {}
+        {
+        }
+
         private void TotalEmpleados_Click(object sender, EventArgs e)
-        {}
+        {
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            CosultasGestion c = new CosultasGestion();
+            c.ShowDialog();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            CitasGestion c = new CitasGestion();
+            c.ShowDialog();
+        }
+
+        private void dgvPacientes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void toolStripLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

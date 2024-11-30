@@ -7,121 +7,103 @@ using System.Threading.Tasks;
 
 namespace General.CLS
 {
-    internal class Consulta
+    public class Consulta
     {
-        Int32 _ID_Consulta;
-        Int32 _ID_Receta;
-        Int32 _ID_Cita;
-        Int32 _ID_Doctor;
-        Int32 _ID_Consultorio;
-        String _Dianostico;
-        String _Indicaciones;
+        // Propiedades
+        private int _ID_Consulta;
+        private int _Citas_ID_Cita;
+        private string _Cons_Diganostico;
+        private string _Cons_Tratamiento;
+        private string _Cons_PoseeCita;
+        private float _Cons_PrecioConsulta;
+        private DateTime _Cons_FechaConsulta;
 
         public int ID_Consulta { get => _ID_Consulta; set => _ID_Consulta = value; }
-        public int ID_Receta { get => _ID_Receta; set => _ID_Receta = value; }
-        public int ID_Cita { get => _ID_Cita; set => _ID_Cita = value; }
-        public int ID_Doctor { get => _ID_Doctor; set => _ID_Doctor = value; }
-        public int ID_Consultorio { get => _ID_Consultorio; set => _ID_Consultorio = value; }
-        public string Dianostico { get => _Dianostico; set => _Dianostico = value; }
-        public string Indicaciones { get => _Indicaciones; set => _Indicaciones = value; }
-
-        public Boolean Insertar()
+        public int Citas_ID_Cita { get => _Citas_ID_Cita; set => _Citas_ID_Cita = value; }
+        public string Cons_Diganostico { get => _Cons_Diganostico; set => _Cons_Diganostico = value; }
+        public string Cons_Tratamiento { get => _Cons_Tratamiento; set => _Cons_Tratamiento = value; }
+        public float Cons_PrecioConsulta { get => _Cons_PrecioConsulta; set => _Cons_PrecioConsulta = value; }
+        public DateTime Cons_FechaConsulta { get => _Cons_FechaConsulta; set => _Cons_FechaConsulta = value; }
+        public string Cons_PoseeCita { get => _Cons_PoseeCita; set => _Cons_PoseeCita = value; }
+        // Método Insertar
+        public bool InsertarConsulta(Consulta consulta)
         {
-            Boolean Resultado = false;
-            //crando el obejto
-            DataLayer.DBOperaciones Operacion = new DataLayer.DBOperaciones();
-            //permiten construir cadenas los stringBuilder
-            StringBuilder Setencia = new StringBuilder();
+            // Construir la sentencia SQL de inserción
+            StringBuilder sentencia = new StringBuilder();
+            sentencia.Append("INSERT INTO cm_consultas (Cons_Diganostico, Cons_Tratamiento, Cons_PrecioConsulta, Cons_FechaConsulta, Citas_ID_Cita, Cons_PoseeCita) ");
+            sentencia.Append("VALUES (");
+            sentencia.Append("'" + consulta.Cons_Diganostico + "', ");
+            sentencia.Append("'" + consulta.Cons_Tratamiento + "', ");
+            sentencia.Append(consulta.Cons_PrecioConsulta + ", ");
+            sentencia.Append("'" + consulta.Cons_FechaConsulta.ToString("yyyy-MM-dd HH:mm:ss") + "', ");
 
-            Setencia.Append("INSERT INTO `Consulta` (`ID_Receta`, `ID_Cita`, `ID_Doctor`, `ID_Consultorio`, `Diagnostico`, `Indicaciones`) VALUES(");
-            Setencia.Append("'" + _ID_Receta + "','" + _ID_Cita + "','" + _ID_Doctor + "','" + _ID_Consultorio + "','" + _Dianostico + "','" + _Indicaciones + "');");
-            try
+            // Si PoseeCita es "NO", asignamos NULL a Citas_ID_Cita
+            if (consulta.Cons_PoseeCita == "NO")
             {
-                if (Operacion.EjecutarSentencia(Setencia.ToString()) >= 0)
-                {
-                    Resultado = true;
-                }
-                else
-                {
-                    Resultado = false;
-                }
-
+                sentencia.Append("NULL, ");  // Para que Citas_ID_Cita sea NULL si PoseeCita es "NO"
             }
-            catch (Exception)
+            else
             {
-                Resultado |= false;
+                sentencia.Append(consulta.Citas_ID_Cita + ", ");  // Asignamos el ID de la cita si PoseeCita es "SI"
             }
 
-            return Resultado;
-        }
-
-        public Boolean Actualizar()
-        {
-            Boolean Resultado = false;
-            //crando el obejto
-            DataLayer.DBOperaciones Operacion = new DataLayer.DBOperaciones();
-            //permiten construir cadenas los stringBuilder
-
-            StringBuilder Setencia = new StringBuilder();
-            Setencia.Append("UPDATE Consulta SET ");
-            Setencia.Append("`ID_Receta`='" + _ID_Receta + "',");
-            Setencia.Append("`ID_Cita`='" + _ID_Cita + "',");
-            Setencia.Append("`ID_Doctor`='" + _ID_Doctor + "',");
-            Setencia.Append("`ID_Consultorio`='" + _ID_Consultorio + "',");
-            Setencia.Append("`Diagnostico`='" + _Dianostico + "',");
-            Setencia.Append("`Indicaciones` = '" + _Indicaciones + "'");
-            Setencia.Append("WHERE `ID_Consulta` ='" + _ID_Consulta + "';");
+            // Insertar el valor de Cons_PoseeCita
+            sentencia.Append("'" + consulta.Cons_PoseeCita + "');");
 
             try
             {
-                if (Operacion.EjecutarSentencia(Setencia.ToString()) >= 0)
+                // Ejecutar la sentencia SQL en la base de datos
+                DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
+                if (operacion.EjecutarSentencia(sentencia.ToString()) >= 0)
                 {
-                    Resultado = true;
+                    return true;
                 }
-                else
-                {
-                    Resultado = false;
-                }
-
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Resultado = false;
+                // Si ocurre un error, lo registramos en la consola
+                Console.WriteLine("Error al insertar la consulta: " + ex.Message);
             }
 
-            return Resultado;
+            return false;
         }
-
-        public Boolean Eliminar()
+        // Método Actualizar
+        public bool ActualizarConsulta(Consulta consulta)
         {
-            Boolean Resultado = false;
-            //crando el obejto
-            DataLayer.DBOperaciones Operacion = new DataLayer.DBOperaciones();
-            //permiten construir cadenas los stringBuilder
+            StringBuilder sentencia = new StringBuilder();
+            sentencia.Append("UPDATE cm_consultas SET ");
+            sentencia.Append("Cons_Diganostico = '" + consulta.Cons_Diganostico + "', ");
+            sentencia.Append("Cons_Tratamiento = '" + consulta.Cons_Tratamiento + "', ");
+            sentencia.Append("Cons_PrecioConsulta = " + consulta.Cons_PrecioConsulta + ", ");
+            sentencia.Append("Cons_FechaConsulta = '" + consulta.Cons_FechaConsulta.ToString("yyyy-MM-dd HH:mm:ss") + "', ");
+            sentencia.Append("Cons_PoseeCita = '" + consulta.Cons_PoseeCita + "', ");
 
-            StringBuilder Setencia = new StringBuilder();
-            Setencia.Append("DELETE FROM Consulta ");
-            Setencia.Append("WHERE ID_Consulta =" + _ID_Consulta + ";");
+            // Si PoseeCita es "NO", asignamos NULL a Citas_ID_Cita
+            if (consulta.Cons_PoseeCita == "NO")
+            {
+                sentencia.Append("Citas_ID_Cita = NULL ");
+            }
+            else
+            {
+                sentencia.Append("Citas_ID_Cita = " + consulta.Citas_ID_Cita);
+            }
+
+            sentencia.Append(" WHERE ID_Consulta = " + consulta.ID_Consulta + ";");
 
             try
             {
-                if (Operacion.EjecutarSentencia(Setencia.ToString()) >= 0)
+                DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
+                if (operacion.EjecutarSentencia(sentencia.ToString()) >= 0)
                 {
-                    Resultado = true;
+                    return true;
                 }
-                else
-                {
-                    Resultado = false;
-                }
-
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Resultado = false;
+                Console.WriteLine("Error al actualizar la consulta: " + ex.Message);
             }
 
-            return Resultado;
+            return false;
         }
-        
     }
 }

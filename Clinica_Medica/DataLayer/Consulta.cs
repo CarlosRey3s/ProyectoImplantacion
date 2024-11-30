@@ -13,10 +13,9 @@ namespace DataLayer
     {
         public static DataTable Paciente()
         {
-            // Linea2 -> agregue la line d.linea2
             DataTable Resultado = new DataTable();
-            String Consulta = @"Select p.ID_Paciente, p.Nombre, p.Apellido, p.FechaNacimiento,
-            p.Genero,p.Telefono, p.CorreoElectronico, p.Direccion  from pacientes p";
+            String Consulta = @"Select ID_Paciente, Pac_Nombre, Pac_Apellido, Pac_FechaNacimiento,
+            Pac_Genero,Pac_Telefono, Pac_CorreoElectronico, Pac_Direccion  from CM_Pacientes";
             DBOperaciones operacion = new DBOperaciones();
             try
             {
@@ -102,7 +101,6 @@ namespace DataLayer
             catch (Exception ex) { }
             return Resultado;
         }
-        
         public static DataTable Usuario()
         {
             DataTable Resultado = new DataTable();
@@ -118,7 +116,6 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-                // Manejo de la excepción
                 Console.WriteLine(ex.Message);
             }
             return Resultado;
@@ -135,12 +132,10 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-                // Manejo de la excepción
                 Console.WriteLine(ex.Message);
             }
             return Resultado;
         }
-
         public static DataTable Opciones()
         {
             DataTable Resultado = new DataTable();
@@ -153,7 +148,6 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-                // Manejo de la excepción
                 Console.WriteLine(ex.Message);
             }
             return Resultado;
@@ -170,7 +164,6 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-                // Manejo de la excepción
                 Console.WriteLine(ex.Message);
             }
             return Resultado;
@@ -187,32 +180,31 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-                // Manejo de la excepción
                 Console.WriteLine(ex.Message);
             }
             return Resultado;
         }
-
         public static DataTable Citas()
         {
             DataTable Resultado = new DataTable();
 
-            String Consulta = @"SELECT c.ID_Cita,c.ID_Paciente, p.NombresPaciente, p.ApellidosPaciente, c.Fecha_Hora FROM Citas c JOIN Pacientes p ON c.ID_Paciente = p.ID_Paciente ORDER BY ID_Cita ASC";
+            String Consulta = @"SELECT c.ID_Cita, c.Pacientes_ID_Paciente, p.Pac_Nombre, p.Pac_Apellido, c.Cit_FechaHora, 
+                        c.Cit_Motivo, c.Cit_Estado, c.Doctores_ID_Doctor, c.Consultorios_ID_Consultorio
+                        FROM CM_Citas c 
+                        JOIN CM_Pacientes p ON c.Pacientes_ID_Paciente = p.ID_Paciente 
+                        ORDER BY c.ID_Cita ASC";
             DBOperaciones operacion = new DBOperaciones();
 
             try
             {
                 Resultado = operacion.Consultar(Consulta);
-
             }
             catch (Exception ex)
             {
-                // Manejo de la excepción
                 Console.WriteLine(ex.Message);
             }
             return Resultado;
         }
-
         public static DataTable ConsultaMedicas()
         {
             DataTable Resultado = new DataTable();
@@ -227,13 +219,10 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-                // Manejo de la excepción
                 Console.WriteLine(ex.Message);
             }
             return Resultado;
         }
-
-        //Mande in Salvador
         public static DataTable RecetasMedicas()
         {
             DataTable Resultado = new DataTable();
@@ -246,8 +235,6 @@ namespace DataLayer
             catch (Exception ex) { }
             return Resultado;
         }
-
-        //Salvador
         public static DataTable Consultorio()
         {
             DataTable Resultado = new DataTable();
@@ -277,8 +264,6 @@ namespace DataLayer
             }
             catch (Exception)
             {
-
-
             }
 
             return Resultado;
@@ -321,9 +306,6 @@ namespace DataLayer
 
             return Resultado;
         }
-
-
-
         public static DataTable MedicamentosSegunPeriodo(string pFechaInicio, string pFechaFinal)
         {
             DataTable Resultado = new DataTable();
@@ -399,7 +381,6 @@ namespace DataLayer
 
             return Resultado;
         }
-
         public static DataTable CITAS_SEGUN_PERIODO(string pFechaInicio, string pFechaFinal)
         {
             DataTable Resultado = new DataTable();
@@ -440,10 +421,7 @@ namespace DataLayer
             }
             catch (Exception)
             {
-
-
             }
-
             return Resultado;
         }
     }
