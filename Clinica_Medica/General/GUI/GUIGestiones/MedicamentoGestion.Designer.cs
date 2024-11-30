@@ -38,35 +38,20 @@
             this.Eliminar = new System.Windows.Forms.ToolStripButton();
             this.txtFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btnAgregarImagen = new System.Windows.Forms.Button();
-            this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtProveedor = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtCantidadDiponible = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNombreInsumo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtID_Insumo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pcMedicamento = new System.Windows.Forms.PictureBox();
             this.dgvMedicamentos = new System.Windows.Forms.DataGridView();
-            this.ID_Insumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadDisponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ImagenMedicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadVendida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TotalEmpleados = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ID_Medicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Med_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Med_Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Med_Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Med_CantidadVendida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Med_PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Med_FechaVen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcMedicamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -89,7 +74,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(7, 4);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(1226, 48);
+            this.toolStrip1.Size = new System.Drawing.Size(1178, 48);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -147,178 +132,6 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(20, 45);
             // 
-            // btnAgregarImagen
-            // 
-            this.btnAgregarImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAgregarImagen.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarImagen.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarImagen.Location = new System.Drawing.Point(770, 348);
-            this.btnAgregarImagen.Name = "btnAgregarImagen";
-            this.btnAgregarImagen.Size = new System.Drawing.Size(258, 44);
-            this.btnAgregarImagen.TabIndex = 53;
-            this.btnAgregarImagen.Text = "Agregar Imagen";
-            this.btnAgregarImagen.UseVisualStyleBackColor = false;
-            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
-            // 
-            // dtpFechaNac
-            // 
-            this.dtpFechaNac.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaNac.Location = new System.Drawing.Point(209, 321);
-            this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(347, 29);
-            this.dtpFechaNac.TabIndex = 52;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 321);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 28);
-            this.label5.TabIndex = 51;
-            this.label5.Text = "FechaVencimiento";
-            // 
-            // txtProveedor
-            // 
-            this.txtProveedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProveedor.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProveedor.Location = new System.Drawing.Point(209, 275);
-            this.txtProveedor.Margin = new System.Windows.Forms.Padding(4);
-            this.txtProveedor.Name = "txtProveedor";
-            this.txtProveedor.Size = new System.Drawing.Size(347, 34);
-            this.txtProveedor.TabIndex = 50;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(104, 275);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 28);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "Proveedor";
-            // 
-            // txtPrecioUnitario
-            // 
-            this.txtPrecioUnitario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrecioUnitario.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioUnitario.Location = new System.Drawing.Point(209, 229);
-            this.txtPrecioUnitario.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
-            this.txtPrecioUnitario.Size = new System.Drawing.Size(347, 34);
-            this.txtPrecioUnitario.TabIndex = 48;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(58, 229);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 28);
-            this.label7.TabIndex = 47;
-            this.label7.Text = "PrecioUnitario";
-            // 
-            // txtCantidadDiponible
-            // 
-            this.txtCantidadDiponible.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCantidadDiponible.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadDiponible.Location = new System.Drawing.Point(209, 185);
-            this.txtCantidadDiponible.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCantidadDiponible.Name = "txtCantidadDiponible";
-            this.txtCantidadDiponible.Size = new System.Drawing.Size(347, 34);
-            this.txtCantidadDiponible.TabIndex = 46;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(104, 183);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 28);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "Cantidad";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescripcion.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(209, 139);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(347, 34);
-            this.txtDescripcion.TabIndex = 44;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(81, 139);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 28);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Descripcion";
-            // 
-            // txtNombreInsumo
-            // 
-            this.txtNombreInsumo.BackColor = System.Drawing.Color.White;
-            this.txtNombreInsumo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombreInsumo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreInsumo.Location = new System.Drawing.Point(209, 94);
-            this.txtNombreInsumo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombreInsumo.Name = "txtNombreInsumo";
-            this.txtNombreInsumo.Size = new System.Drawing.Size(347, 34);
-            this.txtNombreInsumo.TabIndex = 42;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(113, 94);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 28);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "Nombre";
-            // 
-            // txtID_Insumo
-            // 
-            this.txtID_Insumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtID_Insumo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID_Insumo.Location = new System.Drawing.Point(209, 56);
-            this.txtID_Insumo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtID_Insumo.Name = "txtID_Insumo";
-            this.txtID_Insumo.ReadOnly = true;
-            this.txtID_Insumo.Size = new System.Drawing.Size(82, 27);
-            this.txtID_Insumo.TabIndex = 40;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(165, 56);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 28);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "ID";
-            // 
-            // pcMedicamento
-            // 
-            this.pcMedicamento.Image = ((System.Drawing.Image)(resources.GetObject("pcMedicamento.Image")));
-            this.pcMedicamento.InitialImage = null;
-            this.pcMedicamento.Location = new System.Drawing.Point(770, 66);
-            this.pcMedicamento.Name = "pcMedicamento";
-            this.pcMedicamento.Size = new System.Drawing.Size(258, 256);
-            this.pcMedicamento.TabIndex = 38;
-            this.pcMedicamento.TabStop = false;
-            // 
             // dgvMedicamentos
             // 
             this.dgvMedicamentos.AllowUserToAddRows = false;
@@ -340,130 +153,126 @@
             this.dgvMedicamentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMedicamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_Insumo,
-            this.NombreInsumo,
-            this.Descripcion,
-            this.CantidadDisponible,
-            this.PrecioUnitario,
-            this.Proveedor,
-            this.FechaVencimiento,
-            this.ImagenMedicamento,
-            this.CantidadVendida});
+            this.ID_Medicamento,
+            this.Med_Nombre,
+            this.Med_Descripcion,
+            this.Med_Cantidad,
+            this.Med_CantidadVendida,
+            this.Med_PrecioUnitario,
+            this.Med_FechaVen});
             this.dgvMedicamentos.EnableHeadersVisualStyles = false;
-            this.dgvMedicamentos.Location = new System.Drawing.Point(26, 438);
+            this.dgvMedicamentos.Location = new System.Drawing.Point(13, 56);
             this.dgvMedicamentos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMedicamentos.Name = "dgvMedicamentos";
             this.dgvMedicamentos.ReadOnly = true;
             this.dgvMedicamentos.RowHeadersWidth = 51;
             this.dgvMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMedicamentos.Size = new System.Drawing.Size(1167, 357);
+            this.dgvMedicamentos.Size = new System.Drawing.Size(1168, 464);
             this.dgvMedicamentos.TabIndex = 54;
-            this.dgvMedicamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
+            this.dgvMedicamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMedicamentos_CellContentClick);
             // 
-            // ID_Insumo
+            // statusStrip1
             // 
-            this.ID_Insumo.DataPropertyName = "ID_Insumo";
-            this.ID_Insumo.FillWeight = 30F;
-            this.ID_Insumo.HeaderText = "ID";
-            this.ID_Insumo.MinimumWidth = 6;
-            this.ID_Insumo.Name = "ID_Insumo";
-            this.ID_Insumo.ReadOnly = true;
+            this.statusStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.TotalEmpleados});
+            this.statusStrip1.Location = new System.Drawing.Point(30, 537);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(185, 26);
+            this.statusStrip1.TabIndex = 55;
+            this.statusStrip1.Text = "statusStrip1";
             // 
-            // NombreInsumo
+            // toolStripStatusLabel1
             // 
-            this.NombreInsumo.DataPropertyName = "NombreInsumo";
-            this.NombreInsumo.HeaderText = "NombreInsumo";
-            this.NombreInsumo.MinimumWidth = 6;
-            this.NombreInsumo.Name = "NombreInsumo";
-            this.NombreInsumo.ReadOnly = true;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(152, 20);
+            this.toolStripStatusLabel1.Text = "Número de Pacientes:";
             // 
-            // Descripcion
+            // TotalEmpleados
             // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
+            this.TotalEmpleados.Name = "TotalEmpleados";
+            this.TotalEmpleados.Size = new System.Drawing.Size(17, 20);
+            this.TotalEmpleados.Text = "0";
             // 
-            // CantidadDisponible
+            // ID_Medicamento
             // 
-            this.CantidadDisponible.DataPropertyName = "CantidadDisponible";
-            this.CantidadDisponible.HeaderText = "CantidadDisponible";
-            this.CantidadDisponible.MinimumWidth = 6;
-            this.CantidadDisponible.Name = "CantidadDisponible";
-            this.CantidadDisponible.ReadOnly = true;
+            this.ID_Medicamento.DataPropertyName = "ID_Medicamento";
+            this.ID_Medicamento.FillWeight = 30F;
+            this.ID_Medicamento.HeaderText = "ID";
+            this.ID_Medicamento.MinimumWidth = 6;
+            this.ID_Medicamento.Name = "ID_Medicamento";
+            this.ID_Medicamento.ReadOnly = true;
             // 
-            // PrecioUnitario
+            // Med_Nombre
             // 
-            this.PrecioUnitario.DataPropertyName = "PrecioUnitario";
-            this.PrecioUnitario.HeaderText = "Precio";
-            this.PrecioUnitario.MinimumWidth = 6;
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            this.PrecioUnitario.ReadOnly = true;
+            this.Med_Nombre.DataPropertyName = "Med_Nombre";
+            this.Med_Nombre.HeaderText = "Nombre";
+            this.Med_Nombre.MinimumWidth = 6;
+            this.Med_Nombre.Name = "Med_Nombre";
+            this.Med_Nombre.ReadOnly = true;
             // 
-            // Proveedor
+            // Med_Descripcion
             // 
-            this.Proveedor.DataPropertyName = "Proveedor";
-            this.Proveedor.HeaderText = "Proveedor";
-            this.Proveedor.MinimumWidth = 6;
-            this.Proveedor.Name = "Proveedor";
-            this.Proveedor.ReadOnly = true;
+            this.Med_Descripcion.DataPropertyName = "Med_Descripcion";
+            this.Med_Descripcion.HeaderText = "Descripcion";
+            this.Med_Descripcion.MinimumWidth = 6;
+            this.Med_Descripcion.Name = "Med_Descripcion";
+            this.Med_Descripcion.ReadOnly = true;
             // 
-            // FechaVencimiento
+            // Med_Cantidad
             // 
-            this.FechaVencimiento.DataPropertyName = "FechaVencimiento";
-            this.FechaVencimiento.HeaderText = "FechaVencimiento";
-            this.FechaVencimiento.MinimumWidth = 6;
-            this.FechaVencimiento.Name = "FechaVencimiento";
-            this.FechaVencimiento.ReadOnly = true;
+            this.Med_Cantidad.DataPropertyName = "Med_Cantidad";
+            this.Med_Cantidad.HeaderText = "Cantidad";
+            this.Med_Cantidad.MinimumWidth = 6;
+            this.Med_Cantidad.Name = "Med_Cantidad";
+            this.Med_Cantidad.ReadOnly = true;
             // 
-            // ImagenMedicamento
+            // Med_CantidadVendida
             // 
-            this.ImagenMedicamento.DataPropertyName = "ImagenMedicamento";
-            this.ImagenMedicamento.HeaderText = "ImagenMedicamento";
-            this.ImagenMedicamento.MinimumWidth = 6;
-            this.ImagenMedicamento.Name = "ImagenMedicamento";
-            this.ImagenMedicamento.ReadOnly = true;
+            this.Med_CantidadVendida.DataPropertyName = "Med_CantidadVendida";
+            this.Med_CantidadVendida.HeaderText = "Vendida";
+            this.Med_CantidadVendida.MinimumWidth = 6;
+            this.Med_CantidadVendida.Name = "Med_CantidadVendida";
+            this.Med_CantidadVendida.ReadOnly = true;
             // 
-            // CantidadVendida
+            // Med_PrecioUnitario
             // 
-            this.CantidadVendida.DataPropertyName = "CantidadVendida";
-            this.CantidadVendida.HeaderText = "CantidadVendida";
-            this.CantidadVendida.MinimumWidth = 6;
-            this.CantidadVendida.Name = "CantidadVendida";
-            this.CantidadVendida.ReadOnly = true;
+            this.Med_PrecioUnitario.DataPropertyName = "Med_PrecioUnitario";
+            this.Med_PrecioUnitario.HeaderText = "Precio";
+            this.Med_PrecioUnitario.MinimumWidth = 6;
+            this.Med_PrecioUnitario.Name = "Med_PrecioUnitario";
+            this.Med_PrecioUnitario.ReadOnly = true;
+            // 
+            // Med_FechaVen
+            // 
+            this.Med_FechaVen.DataPropertyName = "Med_FechaVen";
+            this.Med_FechaVen.HeaderText = "Fecha de Vencimiento";
+            this.Med_FechaVen.MinimumWidth = 6;
+            this.Med_FechaVen.Name = "Med_FechaVen";
+            this.Med_FechaVen.ReadOnly = true;
             // 
             // MedicamentoGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1236, 792);
+            this.ClientSize = new System.Drawing.Size(1188, 588);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dgvMedicamentos);
-            this.Controls.Add(this.btnAgregarImagen);
-            this.Controls.Add(this.dtpFechaNac);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtProveedor);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtPrecioUnitario);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtCantidadDiponible);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtNombreInsumo);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtID_Insumo);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pcMedicamento);
             this.Controls.Add(this.toolStrip1);
             this.Name = "MedicamentoGestion";
             this.Text = "MedicamentoGestion";
             this.Load += new System.EventHandler(this.MedicamentoGestion_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcMedicamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,31 +288,17 @@
         private System.Windows.Forms.ToolStripButton Eliminar;
         private System.Windows.Forms.ToolStripTextBox txtFiltro;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.Button btnAgregarImagen;
-        public System.Windows.Forms.DateTimePicker dtpFechaNac;
-        private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox txtProveedor;
-        private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox txtPrecioUnitario;
-        private System.Windows.Forms.Label label7;
-        public System.Windows.Forms.TextBox txtCantidadDiponible;
-        private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox txtNombreInsumo;
-        private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.TextBox txtID_Insumo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pcMedicamento;
+       
         public System.Windows.Forms.DataGridView dgvMedicamentos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Insumo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreInsumo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadDisponible;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaVencimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ImagenMedicamento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadVendida;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel TotalEmpleados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Medicamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Med_Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Med_Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Med_Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Med_CantidadVendida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Med_PrecioUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Med_FechaVen;
     }
 }

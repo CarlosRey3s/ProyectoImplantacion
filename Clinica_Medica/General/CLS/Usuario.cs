@@ -1,110 +1,142 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Data;
 using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+
 
 namespace General.CLS
 {
-    internal class Usuario
+    public class Usuario
     {
-        // Campos privados
-        private int _ID_Usuario;
-        private int _ID_Empleado;
-        private int _ID_Rol;
-        private string _Rol;
-        private string _Usuario;
-        private string _Clave;
-
-        // Propiedades públicas
-        public int ID_Usuario { get => _ID_Usuario; set => _ID_Usuario = value; }
-        public int ID_Empleado { get => _ID_Empleado; set => _ID_Empleado = value; }
-        public int ID_Rol { get => _ID_Rol; set => _ID_Rol = value; }
-      //  public string Rol { get => _Rol; set => _ID_Rol = value; }
-
-        public string UsuarioNombre { get => _Usuario; set => _Usuario = value; }
-        public string Clave { get => _Clave; set => _Clave = value; }
+        // Propiedades
+        public int IdUsuario { get; set; }
+        public string NombreUsuario { get; set; }
+        public string Clave { get; set; }
+        public int? EmpleadoId { get; set; } // Puede ser null
+        public int RolId { get; set; }
 
         // Método para insertar un nuevo usuario
         public bool Insertar()
         {
             bool resultado = false;
             DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
-            StringBuilder sentencia = new StringBuilder();
+            string query = @"
+                INSERT INTO `cm_usuarios` (`Usu_Usuario`, `Usu_Clave`, `Empleados_ID_Empleado`, `Roles_ID_Rol`) 
+                VALUES (@NombreUsuario, @Clave, @EmpleadoId, @RolId);";
 
-            sentencia.Append("INSERT INTO `Usuarios` (`ID_Empleado`, `ID_Rol`, `Usuario`, `Clave`) VALUES (");
-            sentencia.Append("'" + _ID_Empleado + "', '" + _ID_Rol + "', '" + _Usuario + "', '" + _Clave + "');");
+            var parametros = new Dictionary<string, object>
+            {
+                { "@NombreUsuario", NombreUsuario },
+                { "@Clave", Clave },
+                { "@EmpleadoId", EmpleadoId.HasValue ? (object)EmpleadoId.Value : DBNull.Value },
+                { "@RolId", RolId }
+            };
 
             try
             {
-                if (operacion.EjecutarSentencia(sentencia.ToString()) >= 0)
+                if (operacion.EjecutarSentencia(query, parametros) >= 0)
                 {
                     resultado = true;
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                resultado = false;
+                Console.WriteLine($"Error al insertar usuario: {ex.Message}");
             }
 
             return resultado;
         }
 
-        // Método para actualizar un usuario existente
+        // Método para actualizar un usuario
         public bool Actualizar()
         {
             bool resultado = false;
             DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
-            StringBuilder sentencia = new StringBuilder();
+            string query = @"
+                UPDATE `cm_usuarios` 
+                SET `Usu_Usuario` = @NombreUsuario, 
+                    `Usu_Clave` = @Clave, 
+                    `Empleados_ID_Empleado` = @EmpleadoId, 
+                    `Roles_ID_Rol` = @RolId 
+                WHERE `ID_Usuario` = @IdUsuario;";
 
-            sentencia.Append("UPDATE `Usuarios` SET ");
-            sentencia.Append("`ID_Empleado` = '" + _ID_Empleado + "', ");
-            sentencia.Append("`ID_Rol` = '" + _ID_Rol + "', ");
-            sentencia.Append("`Usuario` = '" + _Usuario + "', ");
-            sentencia.Append("`Clave` = '" + _Clave + "' ");
-            sentencia.Append("WHERE `ID_Usuario` = '" + _ID_Usuario + "';");
+            var parametros = new Dictionary<string, object>
+            {
+                { "@NombreUsuario", NombreUsuario },
+                { "@Clave", Clave },
+                { "@EmpleadoId", EmpleadoId.HasValue ? (object)EmpleadoId.Value : DBNull.Value },
+                { "@RolId", RolId },
+                { "@IdUsuario", IdUsuario }
+            };
 
             try
             {
-                if (operacion.EjecutarSentencia(sentencia.ToString()) >= 0)
+                if (operacion.EjecutarSentencia(query, parametros) >= 0)
                 {
                     resultado = true;
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                resultado = false;
+                Console.WriteLine($"Error al actualizar usuario: {ex.Message}");
             }
 
             return resultado;
         }
 
-        // Método para eliminar un usuario existente
+        // Método para eliminar un usuario
         public bool Eliminar()
         {
             bool resultado = false;
             DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
-            StringBuilder sentencia = new StringBuilder();
+            string query = "DELETE FROM `cm_usuarios` WHERE `ID_Usuario` = @IdUsuario;";
 
-            sentencia.Append("DELETE FROM `Usuarios` ");
-            sentencia.Append("WHERE `ID_Usuario` = " + _ID_Usuario + ";");
+            var parametros = new Dictionary<string, object>
+            {
+                { "@IdUsuario", IdUsuario }
+            };
 
             try
             {
-                if (operacion.EjecutarSentencia(sentencia.ToString()) >= 0)
+                if (operacion.EjecutarSentencia(query, parametros) >= 0)
                 {
                     resultado = true;
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                resultado = false;
+                Console.WriteLine($"Error al eliminar usuario: {ex.Message}");
             }
 
             return resultado;
+        }
+
+        // Método para listar los usuarios
+        public static DataTable ListarUsuario()
+        {
+            DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
+            string query = @"
+                SELECT 
+                    u.ID_Usuario, 
+                    u.Usu_Usuario, 
+                    u.Usu_Clave, 
+                    u.Empleados_ID_Empleado, 
+                    COALESCE(e.Emp_Nombre, 'Sin asignar') AS NombreEmpleado, 
+                    u.Roles_ID_Rol, 
+                    COALESCE(r.Rol_NombreRol, 'Sin rol') AS NombreRol
+                FROM cm_usuarios u
+                LEFT JOIN cm_empleados e ON u.Empleados_ID_Empleado = e.ID_Empleado
+                LEFT JOIN cm_roles r ON u.Roles_ID_Rol = r.ID_Rol;";
+
+            try
+            {
+                return operacion.Consultar(query);
+            }
+            catch (Exception ex)
+            {
+                //nsole.WriteLine($"Error al listar usuarios: {ex.Message}");
+                return null;
+            }
         }
     }
 }

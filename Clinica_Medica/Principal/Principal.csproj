@@ -120,12 +120,8 @@
       <Name>DataLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\General\General.csproj">
-      <Project>{990BC726-3CB9-42A2-9B26-86980BEC4296}</Project>
+      <Project>{990bc726-3cb9-42a2-9b26-86980bec4296}</Project>
       <Name>General</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Reportes\Reportes.csproj">
-      <Project>{1809692b-55ea-46d6-91c9-664c2a4b34b4}</Project>
-      <Name>Reportes</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

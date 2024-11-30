@@ -39,10 +39,10 @@
             this.txtFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.VistaPrevia = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.dgvRoles = new System.Windows.Forms.DataGridView();
             this.ID_Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.Rol_NombreRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoles)).BeginInit();
             this.SuspendLayout();
@@ -136,6 +136,16 @@
             this.VistaPrevia.Text = "GestionarPermisos";
             this.VistaPrevia.Click += new System.EventHandler(this.VistaPrevia_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 45);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // dgvRoles
             // 
             this.dgvRoles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -153,7 +163,7 @@
             this.dgvRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Rol,
-            this.NombreRol});
+            this.Rol_NombreRol});
             this.dgvRoles.EnableHeadersVisualStyles = false;
             this.dgvRoles.Location = new System.Drawing.Point(31, 56);
             this.dgvRoles.Margin = new System.Windows.Forms.Padding(4);
@@ -161,8 +171,9 @@
             this.dgvRoles.RowHeadersVisible = false;
             this.dgvRoles.RowHeadersWidth = 51;
             this.dgvRoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoles.Size = new System.Drawing.Size(769, 422);
+            this.dgvRoles.Size = new System.Drawing.Size(827, 422);
             this.dgvRoles.TabIndex = 7;
+            this.dgvRoles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoles_CellContentClick);
             // 
             // ID_Rol
             // 
@@ -172,22 +183,12 @@
             this.ID_Rol.MinimumWidth = 6;
             this.ID_Rol.Name = "ID_Rol";
             // 
-            // NombreRol
+            // Rol_NombreRol
             // 
-            this.NombreRol.DataPropertyName = "NombreRol";
-            this.NombreRol.HeaderText = "NombreRol";
-            this.NombreRol.MinimumWidth = 6;
-            this.NombreRol.Name = "NombreRol";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 45);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.Rol_NombreRol.DataPropertyName = "Rol_NombreRol";
+            this.Rol_NombreRol.HeaderText = "NombreRol";
+            this.Rol_NombreRol.MinimumWidth = 6;
+            this.Rol_NombreRol.Name = "Rol_NombreRol";
             // 
             // RolesGestion
             // 
@@ -219,8 +220,8 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripButton VistaPrevia;
         public System.Windows.Forms.DataGridView dgvRoles;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Rol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreRol;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Rol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rol_NombreRol;
     }
 }

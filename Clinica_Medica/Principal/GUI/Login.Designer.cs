@@ -36,11 +36,11 @@
             this.btnEntrar = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,6 +137,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(432, 558);
             this.panel2.TabIndex = 17;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Navy;
+            this.label7.Location = new System.Drawing.Point(136, 433);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(161, 28);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Registrar Usuario";
             // 
             // label6
             // 
@@ -171,18 +184,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(428, 558);
             this.label1.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(136, 433);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 28);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Registrar Usuario";
             // 
             // Login
             // 

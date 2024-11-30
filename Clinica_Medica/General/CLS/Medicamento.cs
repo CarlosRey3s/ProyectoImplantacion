@@ -1,42 +1,68 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Data;
 using System.Text;
-using System.Threading.Tasks;
+using DataLayer;
 
 namespace General.CLS
 {
     internal class Medicamento
     {
         // Campos privados
-        private int _ID_Insumo;
-        private string _NombreInsumo;
-        private string _Descripcion;
-        private int _CantidadDisponible;
-        private decimal _PrecioUnitario;
-        private string _Proveedor;
-        private DateTime _FechaVencimiento;
-        private string _ImagenMedicamento;
+        private int _ID_Medicamento;
+        private string _Med_Nombre;
+        private string _Med_Descripcion;
+        private int _Med_Cantidad;
+        private int _Med_CantidadVendida;
+        private decimal _Med_PrecioUnitario;
+        private DateTime _Med_FechaVen;
 
         // Propiedades públicas
-        public int ID_Insumo { get => _ID_Insumo; set => _ID_Insumo = value; }
-        public string NombreInsumo { get => _NombreInsumo; set => _NombreInsumo = value; }
-        public string Descripcion { get => _Descripcion; set => _Descripcion = value; }
-        public int CantidadDisponible { get => _CantidadDisponible; set => _CantidadDisponible = value; }
-        public decimal PrecioUnitario { get => _PrecioUnitario; set => _PrecioUnitario = value; }
-        public string Proveedor { get => _Proveedor; set => _Proveedor = value; }
-        public DateTime FechaVencimiento { get => _FechaVencimiento; set => _FechaVencimiento = value; }
-        public string ImagenMedicamento { get => _ImagenMedicamento; set => _ImagenMedicamento = value; }
+        public int ID_Medicamento { get => _ID_Medicamento; set => _ID_Medicamento = value; }
+        public string Med_Nombre { get => _Med_Nombre; set => _Med_Nombre = value; }
+        public string Med_Descripcion { get => _Med_Descripcion; set => _Med_Descripcion = value; }
+        public int Med_Cantidad { get => _Med_Cantidad; set => _Med_Cantidad = value; }
+        public int Med_CantidadVendida { get => _Med_CantidadVendida; set => _Med_CantidadVendida = value; }
+        public decimal Med_PrecioUnitario { get => _Med_PrecioUnitario; set => _Med_PrecioUnitario = value; }
+        public DateTime Med_FechaVen { get => _Med_FechaVen; set => _Med_FechaVen = value; }
+
+        // Método para obtener la lista de medicamentos
+        public static DataTable Medicamentos()
+        {
+            DataTable resultado = new DataTable();
+            string consulta = @"
+            SELECT 
+                ID_Medicamento, 
+                Med_Nombre, 
+                Med_Descripcion, 
+                Med_Cantidad, 
+                Med_CantidadVendida, 
+                Med_PrecioUnitario, 
+                Med_FechaVen
+            FROM cm_medicamentos;";
+
+            DBOperaciones operacion = new DBOperaciones();
+
+            try
+            {
+                resultado = operacion.Consultar(consulta);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en la consulta de medicamentos: {ex.Message}");
+            }
+
+            return resultado;
+        }
 
         // Método para insertar un nuevo medicamento
         public bool Insertar()
         {
             bool resultado = false;
-            DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
+            DBOperaciones operacion = new DBOperaciones();
             StringBuilder sentencia = new StringBuilder();
 
-            sentencia.Append("INSERT INTO `Medicamentos` (`NombreInsumo`, `Descripcion`, `CantidadDisponible`, `PrecioUnitario`, `Proveedor`, `FechaVencimiento`, `ImagenMedicamento`) VALUES (");
-            sentencia.Append("'" + _NombreInsumo + "', '" + _Descripcion + "', '" + _CantidadDisponible + "', '" + _PrecioUnitario + "', '" + _Proveedor + "', '" + _FechaVencimiento.ToString("yyyy-MM-dd") + "', '" + _ImagenMedicamento + "');");
+            sentencia.Append("INSERT INTO cm_medicamentos (Med_Nombre, Med_Descripcion, Med_Cantidad, Med_CantidadVendida, Med_PrecioUnitario, Med_FechaVen) VALUES (");
+            sentencia.Append($"'{_Med_Nombre}', '{_Med_Descripcion}', {_Med_Cantidad}, {_Med_CantidadVendida}, {_Med_PrecioUnitario}, '{_Med_FechaVen:yyyy-MM-dd}');");
 
             try
             {
@@ -47,8 +73,7 @@ namespace General.CLS
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                resultado = false;
+                Console.WriteLine($"Error al insertar medicamento: {ex.Message}");
             }
 
             return resultado;
@@ -58,18 +83,17 @@ namespace General.CLS
         public bool Actualizar()
         {
             bool resultado = false;
-            DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
+            DBOperaciones operacion = new DBOperaciones();
             StringBuilder sentencia = new StringBuilder();
 
-            sentencia.Append("UPDATE `Medicamentos` SET ");
-            sentencia.Append("`NombreInsumo` = '" + _NombreInsumo + "', ");
-            sentencia.Append("`Descripcion` = '" + _Descripcion + "', ");
-            sentencia.Append("`CantidadDisponible` = '" + _CantidadDisponible + "', ");
-            sentencia.Append("`PrecioUnitario` = '" + _PrecioUnitario + "', ");
-            sentencia.Append("`Proveedor` = '" + _Proveedor + "', ");
-            sentencia.Append("`FechaVencimiento` = '" + _FechaVencimiento.ToString("yyyy-MM-dd") + "', ");
-            sentencia.Append("`ImagenMedicamento` = '" + _ImagenMedicamento + "' ");
-            sentencia.Append("WHERE `ID_Insumo` = '" + _ID_Insumo + "';");
+            sentencia.Append("UPDATE cm_medicamentos SET ");
+            sentencia.Append($"Med_Nombre = '{_Med_Nombre}', ");
+            sentencia.Append($"Med_Descripcion = '{_Med_Descripcion}', ");
+            sentencia.Append($"Med_Cantidad = {_Med_Cantidad}, ");
+            sentencia.Append($"Med_CantidadVendida = {_Med_CantidadVendida}, ");
+            sentencia.Append($"Med_PrecioUnitario = {_Med_PrecioUnitario}, ");
+            sentencia.Append($"Med_FechaVen = '{_Med_FechaVen:yyyy-MM-dd}' ");
+            sentencia.Append($"WHERE ID_Medicamento = {_ID_Medicamento};");
 
             try
             {
@@ -80,8 +104,7 @@ namespace General.CLS
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                resultado = false;
+                Console.WriteLine($"Error al actualizar medicamento: {ex.Message}");
             }
 
             return resultado;
@@ -91,11 +114,10 @@ namespace General.CLS
         public bool Eliminar()
         {
             bool resultado = false;
-            DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
+            DBOperaciones operacion = new DBOperaciones();
             StringBuilder sentencia = new StringBuilder();
 
-            sentencia.Append("DELETE FROM `Medicamentos` ");
-            sentencia.Append("WHERE `ID_Insumo` = " + _ID_Insumo + ";");
+            sentencia.Append($"DELETE FROM cm_medicamentos WHERE ID_Medicamento = {_ID_Medicamento};");
 
             try
             {
@@ -106,8 +128,7 @@ namespace General.CLS
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                resultado = false;
+                Console.WriteLine($"Error al eliminar medicamento: {ex.Message}");
             }
 
             return resultado;

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DataLayer;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,21 +12,45 @@ namespace General.CLS
     {
         // Campos privados
         private int _ID_Rol;
-        private string _NombreRol;
+        private string _Rol_NombreRol;
 
         // Propiedades públicas
         public int ID_Rol { get => _ID_Rol; set => _ID_Rol = value; }
-        public string NombreRol { get => _NombreRol; set => _NombreRol = value; }
+        public string Rol_NombreRol { get => _Rol_NombreRol; set => _Rol_NombreRol = value; }
 
-        // Método para insertar un nuevo usuario
+        // Método para obtener la lista de roles
+        public static DataTable Rol()
+        {
+            DataTable resultado = new DataTable();
+            string consulta = @"
+            SELECT 
+                ID_Rol, 
+                Rol_NombreRol 
+            FROM cm_roles;";
+
+            DBOperaciones operacion = new DBOperaciones();
+
+            try
+            {
+                resultado = operacion.Consultar(consulta);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en la consulta de roles: {ex.Message}");
+            }
+
+            return resultado;
+        }
+
+        // Método para insertar un nuevo rol
         public bool Insertar()
         {
             bool resultado = false;
-            DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
+            DBOperaciones operacion = new DBOperaciones();
             StringBuilder sentencia = new StringBuilder();
 
-            sentencia.Append("INSERT INTO `Roles` (`ID_Rol`, `NombreRol`) VALUES (");
-            sentencia.Append("'" + _ID_Rol + "', '" + _NombreRol + "');");
+            sentencia.Append("INSERT INTO cm_roles (Rol_NombreRol) VALUES (");
+            sentencia.Append($"'{_Rol_NombreRol}');");
 
             try
             {
@@ -35,23 +61,23 @@ namespace General.CLS
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine($"Error al insertar rol: {ex.Message}");
                 resultado = false;
             }
 
             return resultado;
         }
 
-        // Método para actualizar un usuario existente
+        // Método para actualizar un rol existente
         public bool Actualizar()
         {
             bool resultado = false;
-            DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
+            DBOperaciones operacion = new DBOperaciones();
             StringBuilder sentencia = new StringBuilder();
 
-            sentencia.Append("UPDATE `Roles` SET ");
-            sentencia.Append("`NombreRol` = '" + _NombreRol + "' ");
-            sentencia.Append("WHERE `ID_Rol` = '" + _ID_Rol + "';");
+            sentencia.Append("UPDATE cm_roles SET ");
+            sentencia.Append($"Rol_NombreRol = '{_Rol_NombreRol}' ");
+            sentencia.Append($"WHERE ID_Rol = {_ID_Rol};");
 
             try
             {
@@ -62,23 +88,21 @@ namespace General.CLS
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine($"Error al actualizar rol: {ex.Message}");
                 resultado = false;
             }
 
             return resultado;
         }
 
-
-        // Método para eliminar un usuario existente
+        // Método para eliminar un rol existente
         public bool Eliminar()
         {
             bool resultado = false;
-            DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
+            DBOperaciones operacion = new DBOperaciones();
             StringBuilder sentencia = new StringBuilder();
 
-            sentencia.Append("DELETE FROM `Roles` ");
-            sentencia.Append("WHERE `ID_ROL` = " + _ID_Rol + ";");
+            sentencia.Append($"DELETE FROM cm_roles WHERE ID_Rol = {_ID_Rol};");
 
             try
             {
@@ -89,89 +113,108 @@ namespace General.CLS
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine($"Error al eliminar rol: {ex.Message}");
                 resultado = false;
             }
 
             return resultado;
         }
 
-        //Agrega un Permiso al Rol
+        // Método para asignar una opción al rol
         public bool AsignarOpcion(int idOpcion)
         {
             bool resultado = false;
-            DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
+            DBOperaciones operacion = new DBOperaciones();
             StringBuilder sentencia = new StringBuilder();
 
-            sentencia.Append("INSERT INTO AsignacionRolesOpciones (ID_Rol, ID_Opcion) VALUES (");
-            sentencia.Append("'" + _ID_Rol + "', '" + idOpcion + "');");
+            // Comprobamos si el rol ya tiene la opción asignada antes de intentar insertarla
+            if (TieneOpcionAsignada(idOpcion))
+            {
+                Console.WriteLine("El rol ya tiene esta opción asignada.");
+                return false;  // Si ya tiene la opción, no se asigna de nuevo
+            }
+
+            // Insertamos la relación entre el rol y la opción en la tabla cm_roles_opciones
+            sentencia.Append("INSERT INTO cm_roles_opciones (Roles_ID_Rol, Opciones_ID_Opcion) VALUES (");
+            sentencia.Append($"'{_ID_Rol}', '{idOpcion}');");
 
             try
             {
                 if (operacion.EjecutarSentencia(sentencia.ToString()) >= 0)
                 {
                     resultado = true;
+                    Console.WriteLine("Opción asignada correctamente.");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine($"Error al asignar opción: {ex.Message}");
                 resultado = false;
             }
 
             return resultado;
         }
-        // Método para quitar un permiso de un rol
+
+
+        /// Método para quitar una opción del rol
         public bool QuitarOpcion(int idOpcion)
         {
             bool resultado = false;
-            DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
+            DBOperaciones operacion = new DBOperaciones();
             StringBuilder sentencia = new StringBuilder();
 
-            sentencia.Append("DELETE FROM AsignacionRolesOpciones ");
-            sentencia.Append("WHERE ID_Rol = '" + _ID_Rol + "' AND ID_Opcion = '" + idOpcion + "';");
+            // Verificamos si la opción está asignada al rol antes de intentar eliminarla
+            if (!TieneOpcionAsignada(idOpcion))
+            {
+                Console.WriteLine("El rol no tiene esta opción asignada.");
+                return false;  // Si el rol no tiene la opción asignada, no se hace nada
+            }
+
+            // Eliminamos la relación entre el rol y la opción en la tabla cm_roles_opciones
+            sentencia.Append("DELETE FROM cm_roles_opciones ");
+            sentencia.Append($"WHERE Roles_ID_Rol = {_ID_Rol} AND Opciones_ID_Opcion = {idOpcion};");
 
             try
             {
                 if (operacion.EjecutarSentencia(sentencia.ToString()) >= 0)
                 {
                     resultado = true;
+                    Console.WriteLine("Opción eliminada correctamente.");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine($"Error al quitar opción: {ex.Message}");
                 resultado = false;
             }
 
             return resultado;
         }
+
+
+        // Método para verificar si un rol tiene una opción asignada
         public bool TieneOpcionAsignada(int idOpcion)
         {
             bool tieneAsignada = false;
-            DataLayer.DBOperaciones operacion = new DataLayer.DBOperaciones();
+            DBOperaciones operacion = new DBOperaciones();
             StringBuilder consulta = new StringBuilder();
 
-            // Construir la consulta para verificar si el rol tiene asignada la opción
-            consulta.Append("SELECT COUNT(*) FROM AsignacionRolesOpciones ");
-            consulta.Append("WHERE ID_Rol = '" + _ID_Rol + "' AND ID_Opcion = '" + idOpcion + "';");
+            consulta.Append("SELECT COUNT(*) FROM cm_roles_opciones ");
+            consulta.Append($"WHERE Roles_ID_Rol = {_ID_Rol} AND Opciones_ID_Opcion = {idOpcion};");
 
             try
             {
-                // Ejecutar la consulta y obtener el resultado
                 int count = Convert.ToInt32(operacion.Consultar(consulta.ToString()).Rows[0][0]);
-
-                // Si el resultado es mayor que cero, significa que el rol tiene asignada la opción
                 tieneAsignada = count > 0;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                // En caso de error, se asume que el rol no tiene asignada la opción
+                Console.WriteLine($"Error al verificar asignación: {ex.Message}");
                 tieneAsignada = false;
             }
 
             return tieneAsignada;
         }
+
     }
 }

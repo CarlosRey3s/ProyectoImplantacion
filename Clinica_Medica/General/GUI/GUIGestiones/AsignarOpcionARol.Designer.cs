@@ -72,7 +72,7 @@
             this.Controls.Add(this.lstOpciones);
             this.Name = "AsignarOpcionARol";
             this.Text = "AsignarOpcionARol";
-            this.Load += new System.EventHandler(this.AsignarOpcionARol_Load);
+            
             this.ResumeLayout(false);
 
         }

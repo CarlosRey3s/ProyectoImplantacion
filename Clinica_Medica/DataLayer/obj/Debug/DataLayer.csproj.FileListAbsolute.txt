@@ -310,3 +310,42 @@ C:\Users\ccerr\Documents\Git y Github\ClinicaMedica_Implantacion-main\ClinicaMed
 C:\Users\ccerr\Documents\Git y Github\ClinicaMedica_Implantacion-main\ClinicaMedica_Implantacion-main\Clinica_Medica\DataLayer\obj\Debug\DataLayer.csproj.Up2Date
 C:\Users\ccerr\Documents\Git y Github\ClinicaMedica_Implantacion-main\ClinicaMedica_Implantacion-main\Clinica_Medica\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\ccerr\Documents\Git y Github\ClinicaMedica_Implantacion-main\ClinicaMedica_Implantacion-main\Clinica_Medica\DataLayer\obj\Debug\DataLayer.pdb
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\DataLayer.dll.config
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\DataLayer.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\DataLayer.pdb
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\BouncyCastle.Cryptography.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\Google.Protobuf.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\K4os.Compression.LZ4.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\K4os.Compression.LZ4.Streams.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\K4os.Hash.xxHash.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\MySql.Data.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.Buffers.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.Configuration.ConfigurationManager.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.IO.Pipelines.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.Memory.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.Numerics.Vectors.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.Threading.Tasks.Extensions.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\ZstdSharp.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\BouncyCastle.Cryptography.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\Google.Protobuf.pdb
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\Google.Protobuf.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\K4os.Compression.LZ4.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\K4os.Compression.LZ4.Streams.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\K4os.Hash.xxHash.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\MySql.Data.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.Buffers.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.IO.Pipelines.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.Memory.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.Numerics.Vectors.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\bin\Debug\System.Threading.Tasks.Extensions.xml
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\obj\Debug\DataLayer.dll
+F:\IMPLANTACION\PROYECTO FINAL\ProyectoImplantacion\Clinica_Medica\DataLayer\obj\Debug\DataLayer.pdb

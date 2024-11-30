@@ -183,32 +183,16 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGVSURBVEhL5dW5SiRRGIbhCsbAwQVcUFxCMXRJXC5AE69H
-        UfEiXAbHW5DBWEzV1DUSMdNQHMUBDdR536Zbyp9T3S0diR880NR/6lT12Sr7NunGJObK/N2FhmIHKzjF
-        K94Cr51gGZ2oO01YxD/ETovYdgE/UDU9OESqk3ocwOFMph9XiDc9YQ2Oe0uZv9fxjNj+En34kJ84R2x8
-        jREUZRS2ifc5b814zxZiI9+80vkg/uChbAfDMGNI/ZNNlDKLWNQqjJ3fIta9NgCzgVjXDLK93IW8CRjf
-        PFXXNswUUvVdZHe5C3lOpnFIUnXdw7QhVfdfFj6gFabaA/7CtCNVLz2g1hA5oam6HD5TdYiKJtm1b1wt
-        RZM8BPMLsa7SJJvfiEWXqevcuFqcUMdcvnml83FUXabGTXGG2MhNVHlIKnZ+g3ifh+CHjWbc3m7z2Ni3
-        c507zk68puGwpN78Ar1IxoPKAyveVK991PxOeOR69H7muH7EPGoe1/n4EfFjcowXxE69doQldKCh+DD3
-        ReWT6e+GO/0KybL/Jf0O1UpSmtoAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="ID_Usuario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="NombreEmpleado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Apellido.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Empleados_ID_Empleado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Usuario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Clave.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Roles_ID_Rol.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="NombreRol.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

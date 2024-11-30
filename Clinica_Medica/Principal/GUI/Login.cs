@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
 namespace Principal.GUI
@@ -35,32 +36,34 @@ namespace Principal.GUI
 
         private void btnEntrar_Click_1(object sender, EventArgs e)
         {
-            /* DataTable dt = new DataTable();
-
-             DataLayer.DBOperaciones oOperacion = new DataLayer.DBOperaciones();
-             String query = "SELECT ID_Usuario,Empleados_ID_Empleado, Roles_ID_Rol FROM usuarios WHERE Usuario ='" + txtUsuario.Text + "' AND Clave = '" + txtClave.Text + "';";
-             dt = oOperacion.Consultar(query);
-
-             dt.Rows.Count == 1*/
-
-            SesionLogin dt = new SesionLogin();
-            dt.Username1(txtUsuario.Text);
-            dt.password1(txtClave.Text);
-
-            if (dt.Verificar())
+            /// Crear instancia de SesionLogin para verificar credenciales
+            SesionLogin sesion = new SesionLogin
             {
+                Username = txtUsuario.Text,   // Establecer directamente usando las propiedades
+                Password = txtClave.Text
+            };
+
+            if (sesion.Verificar())
+            {
+                // Si las credenciales son correctas
                 _Autorizado = true;
-                Close();
+                this.Close();  // Cerrar el formulario de login
             }
             else
             {
-                MessageBox.Show("ERROR CONTRASEÑA O USUARIO INCORRECTO.");
+                // Mostrar mensaje de error en caso de credenciales inválidas
+                MessageBox.Show("Usuario o contraseña incorrectos.", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

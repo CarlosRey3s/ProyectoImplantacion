@@ -45,10 +45,11 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.TotalEmpleados = new System.Windows.Forms.ToolStripStatusLabel();
             this.ID_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Empleados_ID_Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Usu_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Usu_Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Roles_ID_Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -126,6 +127,7 @@
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtFiltro.Size = new System.Drawing.Size(250, 48);
+            this.txtFiltro.Click += new System.EventHandler(this.txtFiltro_Click);
             // 
             // toolStripLabel1
             // 
@@ -145,10 +147,9 @@
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(112, 45);
+            this.toolStripButton1.Size = new System.Drawing.Size(92, 45);
             this.toolStripButton1.Text = "VerPermisos";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -174,21 +175,23 @@
             this.dgvUsuarios.ColumnHeadersHeight = 30;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Usuario,
-            this.Nombre,
-            this.Apellido,
-            this.Usuario,
-            this.Clave,
+            this.NombreEmpleado,
+            this.Empleados_ID_Empleado,
+            this.Usu_Usuario,
+            this.Usu_Clave,
+            this.Roles_ID_Rol,
             this.NombreRol});
             this.dgvUsuarios.EnableHeadersVisualStyles = false;
-            this.dgvUsuarios.Location = new System.Drawing.Point(43, 63);
+            this.dgvUsuarios.Location = new System.Drawing.Point(13, 63);
             this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowHeadersVisible = false;
             this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1105, 437);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1162, 437);
             this.dgvUsuarios.TabIndex = 6;
+            this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick_1);
             // 
             // statusStrip1
             // 
@@ -226,37 +229,45 @@
             this.ID_Usuario.Name = "ID_Usuario";
             this.ID_Usuario.ReadOnly = true;
             // 
-            // Nombre
+            // NombreEmpleado
             // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "NombreEmpleado";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
+            this.NombreEmpleado.DataPropertyName = "NombreEmpleado";
+            this.NombreEmpleado.HeaderText = "NombreEmpleado";
+            this.NombreEmpleado.MinimumWidth = 6;
+            this.NombreEmpleado.Name = "NombreEmpleado";
+            this.NombreEmpleado.ReadOnly = true;
             // 
-            // Apellido
+            // Empleados_ID_Empleado
             // 
-            this.Apellido.DataPropertyName = "Apellido";
-            this.Apellido.HeaderText = "ApellidoEmpleado";
-            this.Apellido.MinimumWidth = 6;
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
+            this.Empleados_ID_Empleado.DataPropertyName = "Empleados_ID_Empleado";
+            this.Empleados_ID_Empleado.HeaderText = "ID_Empleado";
+            this.Empleados_ID_Empleado.MinimumWidth = 6;
+            this.Empleados_ID_Empleado.Name = "Empleados_ID_Empleado";
+            this.Empleados_ID_Empleado.ReadOnly = true;
             // 
-            // Usuario
+            // Usu_Usuario
             // 
-            this.Usuario.DataPropertyName = "Usuario";
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.MinimumWidth = 6;
-            this.Usuario.Name = "Usuario";
-            this.Usuario.ReadOnly = true;
+            this.Usu_Usuario.DataPropertyName = "Usu_Usuario";
+            this.Usu_Usuario.HeaderText = "Usuario";
+            this.Usu_Usuario.MinimumWidth = 6;
+            this.Usu_Usuario.Name = "Usu_Usuario";
+            this.Usu_Usuario.ReadOnly = true;
             // 
-            // Clave
+            // Usu_Clave
             // 
-            this.Clave.DataPropertyName = "Clave";
-            this.Clave.HeaderText = "Clave";
-            this.Clave.MinimumWidth = 6;
-            this.Clave.Name = "Clave";
-            this.Clave.ReadOnly = true;
+            this.Usu_Clave.DataPropertyName = "Usu_Clave";
+            this.Usu_Clave.HeaderText = "Clave";
+            this.Usu_Clave.MinimumWidth = 6;
+            this.Usu_Clave.Name = "Usu_Clave";
+            this.Usu_Clave.ReadOnly = true;
+            // 
+            // Roles_ID_Rol
+            // 
+            this.Roles_ID_Rol.DataPropertyName = "Roles_ID_Rol";
+            this.Roles_ID_Rol.HeaderText = "ID_Rol";
+            this.Roles_ID_Rol.MinimumWidth = 6;
+            this.Roles_ID_Rol.Name = "Roles_ID_Rol";
+            this.Roles_ID_Rol.ReadOnly = true;
             // 
             // NombreRol
             // 
@@ -304,10 +315,11 @@
         private System.Windows.Forms.ToolStripStatusLabel TotalEmpleados;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_ID_Empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Usu_Usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Usu_Clave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Roles_ID_Rol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreRol;
     }
 }

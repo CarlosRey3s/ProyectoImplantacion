@@ -27,12 +27,12 @@ namespace General.GUI.GUIGestiones
             try
             {
                 // Consultar las opciones disponibles desde la base de datos
-                DataTable dtOpciones = DataLayer.Consulta.Opciones();
+                DataTable dtOpciones = Controlador.ControladorOpciones.Opciones();
 
                 // Asignar los resultados al ListBox
                 lstOpciones.DataSource = dtOpciones;
-                lstOpciones.DisplayMember = "NombreOpcion";
-                lstOpciones.ValueMember = "ID_Opcion";
+                lstOpciones.DisplayMember = "Opc_NombreOpcion";  // Usar el nombre correcto de la columna
+                lstOpciones.ValueMember = "ID_Opcion";  // Asegúrate de que esta columna existe
             }
             catch (Exception ex)
             {
@@ -40,6 +40,7 @@ namespace General.GUI.GUIGestiones
                 MessageBox.Show("Error al cargar las opciones: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public AsignarOpcionARol()
         {
             InitializeComponent();
@@ -123,6 +124,11 @@ namespace General.GUI.GUIGestiones
                 // Manejar excepciones si ocurren
                 MessageBox.Show("Error al eliminar permiso del rol: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void AsignarOpcionARol_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
