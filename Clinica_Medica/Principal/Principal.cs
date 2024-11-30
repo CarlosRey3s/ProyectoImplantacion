@@ -65,30 +65,8 @@ namespace Principal
             //creacion de objeto para llamarlo
             //nuevoMenuItem.Click += (s, ev) => OpenFroms(f);
 
-            Reportes.GUI.visorMedicamentos f = new visorMedicamentos();
-            Reportes.GUI.visorFactura factura = new visorFactura();//ESTA COMENTADO POR QUE EL REPORTE NO EXITE AQUI 
-            Reportes.GUI.visorCitas cita = new visorCitas();
-            //SE TIENE QUE CREAR 
-            ContextMenuStrip contextMenu = new ContextMenuStrip();
-
-            //parte para crear el submenu que se tocara mostrar cuando seleccione el boton
-            ToolStripMenuItem nuevoMenuItem = new ToolStripMenuItem("Reporte de Inventario"); //asigna un nombre para el reporte que creaste
-            ToolStripMenuItem facturaITem = new ToolStripMenuItem("Reporte de Factura"); //asigna un nombre para el reporte que creaste
-            ToolStripMenuItem salirMenuItem = new ToolStripMenuItem("Reporte de Citas"); //asigna un nombre para el reporte que creaste
-
-            // Asinga los valores a boton que se creo anteriormente
-            nuevoMenuItem.Click += (s, ev) => OpenFroms(f); // mostrara el primer reporte  solo ponele el objeto que crearte 
-            facturaITem.Click += (s, ev) => OpenFroms(factura); // cambia la f por la variable del objeto que se creo para mostrar el reporte
-            salirMenuItem.Click += (s, ev) => OpenFroms(cita);  // cambia la f por la variable del objeto que se creo para mostrar el reporte
-
-            // No tocar nada ya que aui manda a llarmlo para mostrar y ejecuta todo si se mueve valio
-            contextMenu.Items.Add(nuevoMenuItem);
-            contextMenu.Items.Add(facturaITem);
-            contextMenu.Items.Add(new ToolStripSeparator()); // Separador
-            contextMenu.Items.Add(salirMenuItem);
-
-            // Mostrar el ContextMenuStrip en la posición del cursor
-            contextMenu.Show(Cursor.Position);
+         
+            
         }
 
         private void btnDasdoard_Click(object sender, EventArgs e)
@@ -97,15 +75,12 @@ namespace Principal
 
             pictureBox2.Image = btnDasdoard.Image; // selecciona la imagen que esta en el boton
             TituloBarra.Text = btnDasdoard.Text;
-            prueba home = new prueba();
+            Home home = new Home();
             OpenFroms(home);
         }
         private void btnPacientes_Click(object sender, EventArgs e)
         {
-            pictureBox2.Image = btnPacientes.Image;
-            TituloBarra.Text = btnPacientes.Text;
-            PacientesGestion home = new PacientesGestion();
-            OpenFroms(home);
+          
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -171,18 +146,12 @@ namespace Principal
 
         private void btnMedicamentos_Click(object sender, EventArgs e)
         {
-            pictureBox2.Image = btnMedicamentos.Image; // selecciona la imagen que esta en el boton
-            TituloBarra.Text = btnMedicamentos.Text;
-            MedicamentoGestion medicamento = new MedicamentoGestion();
-            OpenFroms(medicamento);
+          
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            pictureBox2.Image = btnUsuarios.Image; // selecciona la imagen que esta en el boton
-            TituloBarra.Text = btnUsuarios.Text;
-            UsuariosGestion usuario = new UsuariosGestion();
-            OpenFroms(usuario);
+          
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)

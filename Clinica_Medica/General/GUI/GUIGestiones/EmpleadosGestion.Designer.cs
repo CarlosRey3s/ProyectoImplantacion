@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmpleadosGestion));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.Insertar = new System.Windows.Forms.ToolStripButton();
@@ -43,19 +45,18 @@
             this.VistaPrevia = new System.Windows.Forms.ToolStripButton();
             this.dtbEmpleado = new System.Windows.Forms.DataGridView();
             this.ID_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaNacminiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ISSS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emp_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emp_Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emp_FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emp_Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emp_DUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emp_ISSS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emp_Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emp_Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cargos_ID_Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.TotalEmpleados = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtbEmpleado)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -156,7 +157,6 @@
             this.dtbEmpleado.AllowUserToAddRows = false;
             this.dtbEmpleado.AllowUserToDeleteRows = false;
             this.dtbEmpleado.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Format = "N2";
             dataGridViewCellStyle1.NullValue = null;
             this.dtbEmpleado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtbEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -180,29 +180,38 @@
             this.dtbEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtbEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_empleado,
-            this.Nombre,
-            this.Apellido,
-            this.FechaNacminiento,
-            this.Telefono,
-            this.DUI,
-            this.ISSS,
-            this.Correo,
-            this.Direccion,
-            this.cargo});
+            this.Emp_Nombre,
+            this.Emp_Apellido,
+            this.Emp_FechaNacimiento,
+            this.Emp_Telefono,
+            this.Emp_DUI,
+            this.Emp_ISSS,
+            this.Emp_Correo,
+            this.Emp_Direccion,
+            this.Cargos_ID_Cargo});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtbEmpleado.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtbEmpleado.EnableHeadersVisualStyles = false;
             this.dtbEmpleado.GridColor = System.Drawing.SystemColors.Control;
-            this.dtbEmpleado.Location = new System.Drawing.Point(39, 63);
+            this.dtbEmpleado.Location = new System.Drawing.Point(39, 52);
             this.dtbEmpleado.MultiSelect = false;
             this.dtbEmpleado.Name = "dtbEmpleado";
             this.dtbEmpleado.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtbEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Format = "N0";
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtbEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtbEmpleado.RowHeadersVisible = false;
             this.dtbEmpleado.RowHeadersWidth = 51;
             this.dtbEmpleado.RowTemplate.Height = 24;
@@ -213,83 +222,86 @@
             // ID_empleado
             // 
             this.ID_empleado.DataPropertyName = "ID_Empleado";
+            dataGridViewCellStyle3.Format = "N0";
+            this.ID_empleado.DefaultCellStyle = dataGridViewCellStyle3;
             this.ID_empleado.HeaderText = "ID";
             this.ID_empleado.MinimumWidth = 6;
             this.ID_empleado.Name = "ID_empleado";
             this.ID_empleado.ReadOnly = true;
+            this.ID_empleado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // Nombre
+            // Emp_Nombre
             // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
+            this.Emp_Nombre.DataPropertyName = "Emp_Nombre";
+            this.Emp_Nombre.HeaderText = "Nombre";
+            this.Emp_Nombre.MinimumWidth = 6;
+            this.Emp_Nombre.Name = "Emp_Nombre";
+            this.Emp_Nombre.ReadOnly = true;
             // 
-            // Apellido
+            // Emp_Apellido
             // 
-            this.Apellido.DataPropertyName = "Apellido";
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.MinimumWidth = 6;
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
+            this.Emp_Apellido.DataPropertyName = "Emp_Apellido";
+            this.Emp_Apellido.HeaderText = "Apellido";
+            this.Emp_Apellido.MinimumWidth = 6;
+            this.Emp_Apellido.Name = "Emp_Apellido";
+            this.Emp_Apellido.ReadOnly = true;
             // 
-            // FechaNacminiento
+            // Emp_FechaNacimiento
             // 
-            this.FechaNacminiento.DataPropertyName = "FechaNacminiento";
-            this.FechaNacminiento.HeaderText = "FechaNacimiento";
-            this.FechaNacminiento.MinimumWidth = 6;
-            this.FechaNacminiento.Name = "FechaNacminiento";
-            this.FechaNacminiento.ReadOnly = true;
+            this.Emp_FechaNacimiento.DataPropertyName = "Emp_FechaNacimiento";
+            this.Emp_FechaNacimiento.HeaderText = "FechaNacimiento";
+            this.Emp_FechaNacimiento.MinimumWidth = 6;
+            this.Emp_FechaNacimiento.Name = "Emp_FechaNacimiento";
+            this.Emp_FechaNacimiento.ReadOnly = true;
             // 
-            // Telefono
+            // Emp_Telefono
             // 
-            this.Telefono.DataPropertyName = "Telefono";
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.MinimumWidth = 6;
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
+            this.Emp_Telefono.DataPropertyName = "Emp_Telefono";
+            this.Emp_Telefono.HeaderText = "Telefono";
+            this.Emp_Telefono.MinimumWidth = 6;
+            this.Emp_Telefono.Name = "Emp_Telefono";
+            this.Emp_Telefono.ReadOnly = true;
             // 
-            // DUI
+            // Emp_DUI
             // 
-            this.DUI.DataPropertyName = "DUI";
-            this.DUI.HeaderText = "DUI";
-            this.DUI.MinimumWidth = 6;
-            this.DUI.Name = "DUI";
-            this.DUI.ReadOnly = true;
+            this.Emp_DUI.DataPropertyName = "Emp_DUI";
+            this.Emp_DUI.HeaderText = "DUI";
+            this.Emp_DUI.MinimumWidth = 6;
+            this.Emp_DUI.Name = "Emp_DUI";
+            this.Emp_DUI.ReadOnly = true;
             // 
-            // ISSS
+            // Emp_ISSS
             // 
-            this.ISSS.DataPropertyName = "ISSS";
-            this.ISSS.HeaderText = "ISSS";
-            this.ISSS.MinimumWidth = 6;
-            this.ISSS.Name = "ISSS";
-            this.ISSS.ReadOnly = true;
+            this.Emp_ISSS.DataPropertyName = "Emp_ISSS";
+            this.Emp_ISSS.HeaderText = "ISSS";
+            this.Emp_ISSS.MinimumWidth = 6;
+            this.Emp_ISSS.Name = "Emp_ISSS";
+            this.Emp_ISSS.ReadOnly = true;
             // 
-            // Correo
+            // Emp_Correo
             // 
-            this.Correo.DataPropertyName = "Correo";
-            this.Correo.HeaderText = "Correo";
-            this.Correo.MinimumWidth = 6;
-            this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
+            this.Emp_Correo.DataPropertyName = "Emp_Correo";
+            this.Emp_Correo.HeaderText = "Correo";
+            this.Emp_Correo.MinimumWidth = 6;
+            this.Emp_Correo.Name = "Emp_Correo";
+            this.Emp_Correo.ReadOnly = true;
             // 
-            // Direccion
+            // Emp_Direccion
             // 
-            this.Direccion.DataPropertyName = "Direccion";
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.MinimumWidth = 6;
-            this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
+            this.Emp_Direccion.DataPropertyName = "Emp_Direccion";
+            this.Emp_Direccion.HeaderText = "Direccion";
+            this.Emp_Direccion.MinimumWidth = 6;
+            this.Emp_Direccion.Name = "Emp_Direccion";
+            this.Emp_Direccion.ReadOnly = true;
+            this.Emp_Direccion.Visible = false;
             // 
-            // cargo
+            // Cargos_ID_Cargo
             // 
-            this.cargo.DataPropertyName = "cargo";
-            this.cargo.HeaderText = "cargo";
-            this.cargo.MinimumWidth = 6;
-            this.cargo.Name = "cargo";
-            this.cargo.ReadOnly = true;
-            this.cargo.Visible = false;
+            this.Cargos_ID_Cargo.DataPropertyName = "Cargos_ID_Cargo";
+            this.Cargos_ID_Cargo.HeaderText = "cargo";
+            this.Cargos_ID_Cargo.MinimumWidth = 6;
+            this.Cargos_ID_Cargo.Name = "Cargos_ID_Cargo";
+            this.Cargos_ID_Cargo.ReadOnly = true;
             // 
             // statusStrip1
             // 
@@ -316,22 +328,12 @@
             this.TotalEmpleados.Text = "0";
             this.TotalEmpleados.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, -1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(38, 24);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // EmpleadosGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(986, 629);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dtbEmpleado);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
@@ -362,16 +364,15 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel TotalEmpleados;
         private System.Windows.Forms.ToolStripButton VistaPrevia;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_empleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNacminiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DUI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ISSS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cargo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_FechaNacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_DUI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_ISSS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_Correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cargos_ID_Cargo;
     }
 }

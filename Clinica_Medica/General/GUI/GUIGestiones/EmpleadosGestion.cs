@@ -1,4 +1,5 @@
 ﻿using General.CLS;
+using General.Controlador;
 using General.GUI.VistaPrevia;
 using System;
 using System.Collections.Generic;
@@ -42,13 +43,14 @@ namespace General.GUI
                 MessageBox.Show("Ocurrió un error al filtrar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void Cargar()
+        public void Cargar()
         {
             try
             {
-                _Datos.DataSource = DataLayer.Consulta.Empleados();
+                _Datos.DataSource = Empleados.MostrarEmpleados();
                 dtbEmpleado.DataSource = _Datos;
                 dtbEmpleado.AutoGenerateColumns = false;
+               
             }
             catch (Exception ex)
             {}
@@ -82,18 +84,20 @@ namespace General.GUI
                 if (MessageBox.Show("Desea modificar el empleado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     EmpleadosEdicion empleados = new EmpleadosEdicion();
+                    
                     empleados.txtIDEmpleado.Text = dtbEmpleado.CurrentRow.Cells["ID_empleado"].Value.ToString();
-                    empleados.txtNombreEmpleado.Text = dtbEmpleado.CurrentRow.Cells["Nombre"].Value.ToString();
-                    empleados.txtApellidoEmpleado.Text = dtbEmpleado.CurrentRow.Cells["Apellido"].Value.ToString();
-                    empleados.dTFechaNac.Text = dtbEmpleado.CurrentRow.Cells["FechaNacminiento"].Value.ToString();
-                    empleados.txtTelefono.Text = dtbEmpleado.CurrentRow.Cells["Telefono"].Value.ToString();
-                    empleados.txtDUI.Text = dtbEmpleado.CurrentRow.Cells["DUI"].Value.ToString();
-                    empleados.txtISSS.Text = dtbEmpleado.CurrentRow.Cells["ISSS"].Value.ToString();
-                    empleados.txtCorreo.Text = dtbEmpleado.CurrentRow.Cells["Correo"].Value.ToString();
-                    empleados.cbxCargo.Text = dtbEmpleado.CurrentRow.Cells["cargo"].Value.ToString();
-                    empleados.txtDireccion.Text = dtbEmpleado.CurrentRow.Cells["Direccion"].Value.ToString();
+                    empleados.txtNombreEmpleado.Text = dtbEmpleado.CurrentRow.Cells["Emp_Nombre"].Value.ToString();
+                    empleados.txtApellidoEmpleado.Text = dtbEmpleado.CurrentRow.Cells["Emp_Apellido"].Value.ToString();
+                    empleados.dTFechaNac.Text = dtbEmpleado.CurrentRow.Cells["Emp_FechaNacimiento"].Value.ToString();
+                    empleados.txtTelefono.Text = dtbEmpleado.CurrentRow.Cells["Emp_Telefono"].Value.ToString();
+                    empleados.txtDUI.Text = dtbEmpleado.CurrentRow.Cells["Emp_DUI"].Value.ToString();
+                    empleados.txtISSS.Text = dtbEmpleado.CurrentRow.Cells["Emp_ISSS"].Value.ToString();
+                    empleados.txtCorreo.Text = dtbEmpleado.CurrentRow.Cells["Emp_Correo"].Value.ToString();
+                    empleados.cbxCargo.Text = dtbEmpleado.CurrentRow.Cells["Cargos_ID_Cargo"].Value.ToString();
+                    empleados.txtDireccion.Text = dtbEmpleado.CurrentRow.Cells["Emp_Direccion"].Value.ToString();
                     empleados.Show();
-                    Cargar();
+                    empleados.DatosActualizados += Cargar;
+                  
                 }
             }
             catch(Exception ex) { 
@@ -106,10 +110,10 @@ namespace General.GUI
             {
                 if (MessageBox.Show("¿Desea eliminar el empleado?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    Empleados f = new Empleados();
-                    f.ID_empleados = Convert.ToInt32(dtbEmpleado.CurrentRow.Cells["ID_empleado"].Value.ToString());
-
-                    if (f.Eliminar())
+                    int ID_empleados = Convert.ToInt32(dtbEmpleado.CurrentRow.Cells["ID_empleado"].Value.ToString());
+                    var controller = new ControladorEmpleados();
+                    bool eliminado = controller.EliminarEmpleado(ID_empleados);
+                    if (eliminado)
                     {
                         MessageBox.Show("Empleado eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
