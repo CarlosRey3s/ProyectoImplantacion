@@ -28,336 +28,328 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FacturaGestion));
-            this.dgvFactura = new System.Windows.Forms.DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.Insertar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.Modificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.Eliminar = new System.Windows.Forms.ToolStripButton();
-            this.txtFiltrar = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.txtFiltro = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.dgvFactura = new System.Windows.Forms.DataGridView();
             this.ID_Factura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Consulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MetodoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreMedicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fac_NumeroFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fac_Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fac_MetodoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombrePaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pacientes_ID_Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Consulta_ID_Consulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreDoctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TotalEmpleados = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).BeginInit();
-            this.toolStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvFactura
+            // toolStrip2
             // 
-            this.dgvFactura.AllowUserToAddRows = false;
-            this.dgvFactura.AllowUserToDeleteRows = false;
-            this.dgvFactura.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.toolStrip2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvFactura.BackgroundColor = System.Drawing.Color.White;
-            this.dgvFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvFactura.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvFactura.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvFactura.ColumnHeadersHeight = 30;
-            this.dgvFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_Factura,
-            this.ID_Consulta,
-            this.Concepto,
-            this.Monto,
-            this.FechaEmision,
-            this.FechaPago,
-            this.MetodoPago,
-            this.SubTotal,
-            this.Total,
-            this.NombreMedicamento,
-            this.Precio});
-            this.dgvFactura.EnableHeadersVisualStyles = false;
-            this.dgvFactura.Location = new System.Drawing.Point(37, 139);
-            this.dgvFactura.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvFactura.Name = "dgvFactura";
-            this.dgvFactura.ReadOnly = true;
-            this.dgvFactura.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvFactura.RowHeadersVisible = false;
-            this.dgvFactura.RowHeadersWidth = 51;
-            this.dgvFactura.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFactura.Size = new System.Drawing.Size(1138, 490);
-            this.dgvFactura.TabIndex = 16;
-            this.dgvFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFactura_CellContentClick);
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.toolStrip1.AutoSize = false;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStrip2.AutoSize = false;
+            this.toolStrip2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Insertar,
             this.toolStripSeparator1,
             this.Modificar,
             this.toolStripSeparator2,
-            this.Eliminar,
-            this.txtFiltrar,
-            this.toolStripLabel1});
-            this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.toolStrip1.Location = new System.Drawing.Point(36, 87);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(1139, 48);
-            this.toolStrip1.TabIndex = 15;
-            this.toolStrip1.Text = "toolStrip1";
+            this.btnEliminar,
+            this.txtFiltro,
+            this.toolStripLabel2,
+            this.toolStripButton1});
+            this.toolStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.toolStrip2.Location = new System.Drawing.Point(31, 4);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.toolStrip2.Size = new System.Drawing.Size(678, 39);
+            this.toolStrip2.TabIndex = 6;
+            this.toolStrip2.Text = "toolStrip2";
+            this.toolStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip2_ItemClicked);
             // 
             // Insertar
             // 
             this.Insertar.Image = ((System.Drawing.Image)(resources.GetObject("Insertar.Image")));
             this.Insertar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Insertar.Name = "Insertar";
-            this.Insertar.Size = new System.Drawing.Size(82, 45);
-            this.Insertar.Text = "Insertar";
-            this.Insertar.Click += new System.EventHandler(this.Insertar_Click);
+            this.Insertar.Size = new System.Drawing.Size(73, 36);
+            this.Insertar.Text = "Agregar";
+            this.Insertar.Click += new System.EventHandler(this.Insertar_Click_1);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 48);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
             // Modificar
             // 
             this.Modificar.Image = ((System.Drawing.Image)(resources.GetObject("Modificar.Image")));
             this.Modificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Modificar.Name = "Modificar";
-            this.Modificar.Size = new System.Drawing.Size(97, 45);
+            this.Modificar.Size = new System.Drawing.Size(82, 36);
             this.Modificar.Text = "Modificar";
-            this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
+            this.Modificar.Click += new System.EventHandler(this.Modificar_Click_1);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 48);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
             // 
-            // Eliminar
+            // btnEliminar
             // 
-            this.Eliminar.BackColor = System.Drawing.Color.White;
-            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
-            this.Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Size = new System.Drawing.Size(87, 45);
-            this.Eliminar.Text = "Eliminar";
-            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
+            this.btnEliminar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(74, 36);
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // txtFiltrar
+            // txtFiltro
             // 
-            this.txtFiltrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.txtFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFiltrar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtFiltrar.Size = new System.Drawing.Size(249, 48);
+            this.txtFiltro.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.txtFiltro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFiltro.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtFiltro.Size = new System.Drawing.Size(187, 39);
+            this.txtFiltro.Click += new System.EventHandler(this.txtFiltro_Click);
+            this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
-            // toolStripLabel1
+            // toolStripLabel2
             // 
-            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(20, 45);
+            this.toolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(42, 36);
+            this.toolStripLabel2.Text = "Buscar";
             // 
-            // panel1
+            // toolStripButton1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(77, 36);
+            this.toolStripButton1.Text = "Imprimir";
+            this.toolStripButton1.Visible = false;
+            // 
+            // dgvFactura
+            // 
+            this.dgvFactura.AllowUserToAddRows = false;
+            this.dgvFactura.AllowUserToDeleteRows = false;
+            this.dgvFactura.AllowUserToResizeColumns = false;
+            this.dgvFactura.AllowUserToResizeRows = false;
+            this.dgvFactura.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(36, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1139, 87);
-            this.panel1.TabIndex = 14;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 45);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Facturas";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 28);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Lista de Facturas";
+            this.dgvFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFactura.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvFactura.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvFactura.ColumnHeadersHeight = 30;
+            this.dgvFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_Factura,
+            this.Fac_NumeroFactura,
+            this.Fac_Fecha,
+            this.Fac_MetodoPago,
+            this.NombrePaciente,
+            this.Pacientes_ID_Paciente,
+            this.Consulta_ID_Consulta,
+            this.PrecioConsulta,
+            this.NombreDoctor});
+            this.dgvFactura.EnableHeadersVisualStyles = false;
+            this.dgvFactura.Location = new System.Drawing.Point(31, 50);
+            this.dgvFactura.Name = "dgvFactura";
+            this.dgvFactura.ReadOnly = true;
+            this.dgvFactura.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFactura.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvFactura.RowHeadersVisible = false;
+            this.dgvFactura.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvFactura.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFactura.Size = new System.Drawing.Size(678, 370);
+            this.dgvFactura.TabIndex = 7;
+            this.dgvFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFactura_CellContentClick_1);
             // 
             // ID_Factura
             // 
             this.ID_Factura.DataPropertyName = "ID_Factura";
-            this.ID_Factura.HeaderText = "ID Factura";
+            this.ID_Factura.FillWeight = 30F;
+            this.ID_Factura.HeaderText = "ID";
             this.ID_Factura.MinimumWidth = 6;
             this.ID_Factura.Name = "ID_Factura";
             this.ID_Factura.ReadOnly = true;
-            this.ID_Factura.Width = 125;
             // 
-            // ID_Consulta
+            // Fac_NumeroFactura
             // 
-            this.ID_Consulta.DataPropertyName = "ID_Consulta";
-            this.ID_Consulta.HeaderText = "ID_Consulta";
-            this.ID_Consulta.MinimumWidth = 6;
-            this.ID_Consulta.Name = "ID_Consulta";
-            this.ID_Consulta.ReadOnly = true;
-            this.ID_Consulta.Width = 125;
+            this.Fac_NumeroFactura.DataPropertyName = "Fac_NumeroFactura";
+            this.Fac_NumeroFactura.HeaderText = "Número Factura";
+            this.Fac_NumeroFactura.MinimumWidth = 6;
+            this.Fac_NumeroFactura.Name = "Fac_NumeroFactura";
+            this.Fac_NumeroFactura.ReadOnly = true;
             // 
-            // Concepto
+            // Fac_Fecha
             // 
-            this.Concepto.DataPropertyName = "Concepto";
-            this.Concepto.HeaderText = "Concepto";
-            this.Concepto.MinimumWidth = 6;
-            this.Concepto.Name = "Concepto";
-            this.Concepto.ReadOnly = true;
-            this.Concepto.Width = 125;
+            this.Fac_Fecha.DataPropertyName = "Fac_Fecha";
+            this.Fac_Fecha.HeaderText = "Fecha";
+            this.Fac_Fecha.MinimumWidth = 6;
+            this.Fac_Fecha.Name = "Fac_Fecha";
+            this.Fac_Fecha.ReadOnly = true;
             // 
-            // Monto
+            // Fac_MetodoPago
             // 
-            this.Monto.DataPropertyName = "Monto";
-            this.Monto.HeaderText = "Monto";
-            this.Monto.MinimumWidth = 6;
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
-            this.Monto.Width = 125;
+            this.Fac_MetodoPago.DataPropertyName = "Fac_MetodoPago";
+            this.Fac_MetodoPago.HeaderText = "Método Pago";
+            this.Fac_MetodoPago.MinimumWidth = 6;
+            this.Fac_MetodoPago.Name = "Fac_MetodoPago";
+            this.Fac_MetodoPago.ReadOnly = true;
             // 
-            // FechaEmision
+            // NombrePaciente
             // 
-            this.FechaEmision.DataPropertyName = "FechaEmision";
-            this.FechaEmision.HeaderText = "Fecha de emision";
-            this.FechaEmision.MinimumWidth = 6;
-            this.FechaEmision.Name = "FechaEmision";
-            this.FechaEmision.ReadOnly = true;
-            this.FechaEmision.Width = 125;
+            this.NombrePaciente.DataPropertyName = "NombrePaciente";
+            this.NombrePaciente.HeaderText = "Paciente";
+            this.NombrePaciente.Name = "NombrePaciente";
+            this.NombrePaciente.ReadOnly = true;
             // 
-            // FechaPago
+            // Pacientes_ID_Paciente
             // 
-            this.FechaPago.DataPropertyName = "FechaPago";
-            this.FechaPago.HeaderText = "Fecha de Pago";
-            this.FechaPago.MinimumWidth = 6;
-            this.FechaPago.Name = "FechaPago";
-            this.FechaPago.ReadOnly = true;
-            this.FechaPago.Width = 125;
+            this.Pacientes_ID_Paciente.DataPropertyName = "Pacientes_ID_Paciente";
+            this.Pacientes_ID_Paciente.HeaderText = "Pacientes_ID_Paciente";
+            this.Pacientes_ID_Paciente.Name = "Pacientes_ID_Paciente";
+            this.Pacientes_ID_Paciente.ReadOnly = true;
+            this.Pacientes_ID_Paciente.Visible = false;
             // 
-            // MetodoPago
+            // Consulta_ID_Consulta
             // 
-            this.MetodoPago.DataPropertyName = "MetodoPago";
-            this.MetodoPago.HeaderText = "Metodo de pago";
-            this.MetodoPago.MinimumWidth = 6;
-            this.MetodoPago.Name = "MetodoPago";
-            this.MetodoPago.ReadOnly = true;
-            this.MetodoPago.Width = 125;
+            this.Consulta_ID_Consulta.DataPropertyName = "Consulta_ID_Consulta";
+            this.Consulta_ID_Consulta.HeaderText = "Consulta";
+            this.Consulta_ID_Consulta.Name = "Consulta_ID_Consulta";
+            this.Consulta_ID_Consulta.ReadOnly = true;
+            this.Consulta_ID_Consulta.Visible = false;
             // 
-            // SubTotal
+            // PrecioConsulta
             // 
-            this.SubTotal.DataPropertyName = "SubTotal";
-            this.SubTotal.HeaderText = "SubTotal";
-            this.SubTotal.MinimumWidth = 6;
-            this.SubTotal.Name = "SubTotal";
-            this.SubTotal.ReadOnly = true;
-            this.SubTotal.Width = 125;
+            this.PrecioConsulta.DataPropertyName = "PrecioConsulta";
+            this.PrecioConsulta.HeaderText = "PrecioConsulta";
+            this.PrecioConsulta.Name = "PrecioConsulta";
+            this.PrecioConsulta.ReadOnly = true;
+            this.PrecioConsulta.Visible = false;
             // 
-            // Total
+            // NombreDoctor
             // 
-            this.Total.DataPropertyName = "Total";
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Width = 125;
+            this.NombreDoctor.DataPropertyName = "NombreDoctor";
+            this.NombreDoctor.HeaderText = "NombreDoctor";
+            this.NombreDoctor.Name = "NombreDoctor";
+            this.NombreDoctor.ReadOnly = true;
+            this.NombreDoctor.Visible = false;
             // 
-            // NombreMedicamento
+            // statusStrip1
             // 
-            this.NombreMedicamento.DataPropertyName = "NombreMedicamento";
-            this.NombreMedicamento.HeaderText = "NombreMedicamento";
-            this.NombreMedicamento.MinimumWidth = 6;
-            this.NombreMedicamento.Name = "NombreMedicamento";
-            this.NombreMedicamento.ReadOnly = true;
-            this.NombreMedicamento.Width = 125;
+            this.statusStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.TotalEmpleados});
+            this.statusStrip1.Location = new System.Drawing.Point(48, 422);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(149, 22);
+            this.statusStrip1.TabIndex = 9;
+            this.statusStrip1.Text = "statusStrip1";
             // 
-            // Precio
+            // toolStripStatusLabel1
             // 
-            this.Precio.DataPropertyName = "Precio";
-            this.Precio.HeaderText = "Precio";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            this.Precio.Width = 125;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(123, 17);
+            this.toolStripStatusLabel1.Text = "Número de Pacientes:";
+            // 
+            // TotalEmpleados
+            // 
+            this.TotalEmpleados.Name = "TotalEmpleados";
+            this.TotalEmpleados.Size = new System.Drawing.Size(13, 17);
+            this.TotalEmpleados.Text = "0";
             // 
             // FacturaGestion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1209, 631);
+            this.ClientSize = new System.Drawing.Size(739, 445);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dgvFactura);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Controls.Add(this.toolStrip2);
             this.Name = "FacturaGestion";
             this.Text = "FacturaGestion";
             this.Load += new System.EventHandler(this.FacturaGestion_Load);
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvFactura;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton Insertar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton Modificar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton Eliminar;
-        private System.Windows.Forms.ToolStripTextBox txtFiltrar;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripTextBox txtFiltro;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        public System.Windows.Forms.DataGridView dgvFactura;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel TotalEmpleados;
+        private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Factura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Consulta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Concepto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaEmision;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaPago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MetodoPago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreMedicamento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fac_NumeroFactura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fac_Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fac_MetodoPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombrePaciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pacientes_ID_Paciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Consulta_ID_Consulta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioConsulta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreDoctor;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

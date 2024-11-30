@@ -31,6 +31,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <HintPath>..\Reportes\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <HintPath>..\Reportes\bin\Debug\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <HintPath>..\Reportes\bin\Debug\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <HintPath>..\Reportes\bin\Debug\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -43,94 +55,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CLS\Citas.cs" />
-    <Compile Include="CLS\Consulta.cs" />
-    <Compile Include="CLS\Direccion.cs" />
-    <Compile Include="CLS\Doctor.cs" />
-    <Compile Include="CLS\Empleados.cs" />
     <Compile Include="CLS\Factura.cs" />
     <Compile Include="CLS\FacturaDetalle.cs" />
     <Compile Include="CLS\Medicamento.cs" />
     <Compile Include="CLS\Paciente.cs" />
-    <Compile Include="CLS\Roles.cs" />
-    <Compile Include="CLS\Usuario.cs" />
-    <Compile Include="GUI\GUIEdicion\CitasEdicion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIEdicion\CitasEdicion.Designer.cs">
-      <DependentUpon>CitasEdicion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUIEdicion\ConsultasEdicion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIEdicion\ConsultasEdicion.Designer.cs">
-      <DependentUpon>ConsultasEdicion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUIEdicion\DoctoresEdicion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIEdicion\DoctoresEdicion.Designer.cs">
-      <DependentUpon>DoctoresEdicion.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Controladores\ControladorDetalle.cs" />
+    <Compile Include="Controladores\ControladorFactura.cs" />
     <Compile Include="GUI\GUIEdicion\FacturaEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\GUIEdicion\FacturaEdicion.Designer.cs">
       <DependentUpon>FacturaEdicion.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUIEdicion\PacientesEdicion.cs">
+    <Compile Include="GUI\GUIGestiones\DetallesFactura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUIEdicion\PacientesEdicion.Designer.cs">
-      <DependentUpon>PacientesEdicion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUIEdicion\RolesEdicion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIEdicion\RolesEdicion.Designer.cs">
-      <DependentUpon>RolesEdicion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUIEdicion\UsuariosEdicion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIEdicion\UsuariosEdicion.Designer.cs">
-      <DependentUpon>UsuariosEdicion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\AsignarOpcionARol.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\AsignarOpcionARol.Designer.cs">
-      <DependentUpon>AsignarOpcionARol.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\CitasGestion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\CitasGestion.Designer.cs">
-      <DependentUpon>CitasGestion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\CosultasGestion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\CosultasGestion.Designer.cs">
-      <DependentUpon>CosultasGestion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\DoctoresGestion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\DoctoresGestion.Designer.cs">
-      <DependentUpon>DoctoresGestion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUIEdicion\EmpleadosEdicion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIEdicion\EmpleadosEdicion.Designer.cs">
-      <DependentUpon>EmpleadosEdicion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\EmpleadosGestion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\EmpleadosGestion.Designer.cs">
-      <DependentUpon>EmpleadosGestion.cs</DependentUpon>
+    <Compile Include="GUI\GUIGestiones\DetallesFactura.Designer.cs">
+      <DependentUpon>DetallesFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUIGestiones\FacturaGestion.cs">
       <SubType>Form</SubType>
@@ -138,41 +79,29 @@
     <Compile Include="GUI\GUIGestiones\FacturaGestion.Designer.cs">
       <DependentUpon>FacturaGestion.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUIGestiones\MedicamentoGestion.cs">
+    <Compile Include="GUI\GUIGestiones\ListaConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUIGestiones\MedicamentoGestion.Designer.cs">
-      <DependentUpon>MedicamentoGestion.cs</DependentUpon>
+    <Compile Include="GUI\GUIGestiones\ListaConsulta.Designer.cs">
+      <DependentUpon>ListaConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUIGestiones\PacientesGestion.cs">
+    <Compile Include="GUI\GUIGestiones\ListaMedicamentos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUIGestiones\PacientesGestion.Designer.cs">
-      <DependentUpon>PacientesGestion.cs</DependentUpon>
+    <Compile Include="GUI\GUIGestiones\ListaMedicamentos.Designer.cs">
+      <DependentUpon>ListaMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUIGestiones\ListaPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUIGestiones\ListaPaciente.Designer.cs">
+      <DependentUpon>ListaPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUIGestiones\prueba.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\GUIGestiones\prueba.Designer.cs">
       <DependentUpon>prueba.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\RolesGestion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\RolesGestion.Designer.cs">
-      <DependentUpon>RolesGestion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\UsuariosGestion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\UsuariosGestion.Designer.cs">
-      <DependentUpon>UsuariosGestion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\VerPermisos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUIGestiones\VerPermisos.Designer.cs">
-      <DependentUpon>VerPermisos.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Home.cs">
       <SubType>Form</SubType>
@@ -194,65 +123,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GUI\GUIEdicion\CitasEdicion.resx">
-      <DependentUpon>CitasEdicion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIEdicion\ConsultasEdicion.resx">
-      <DependentUpon>ConsultasEdicion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIEdicion\DoctoresEdicion.resx">
-      <DependentUpon>DoctoresEdicion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUIEdicion\FacturaEdicion.resx">
       <DependentUpon>FacturaEdicion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIEdicion\PacientesEdicion.resx">
-      <DependentUpon>PacientesEdicion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIEdicion\RolesEdicion.resx">
-      <DependentUpon>RolesEdicion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIEdicion\UsuariosEdicion.resx">
-      <DependentUpon>UsuariosEdicion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIGestiones\AsignarOpcionARol.resx">
-      <DependentUpon>AsignarOpcionARol.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIGestiones\CitasGestion.resx">
-      <DependentUpon>CitasGestion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIGestiones\CosultasGestion.resx">
-      <DependentUpon>CosultasGestion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIGestiones\DoctoresGestion.resx">
-      <DependentUpon>DoctoresGestion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIEdicion\EmpleadosEdicion.resx">
-      <DependentUpon>EmpleadosEdicion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIGestiones\EmpleadosGestion.resx">
-      <DependentUpon>EmpleadosGestion.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\GUIGestiones\DetallesFactura.resx">
+      <DependentUpon>DetallesFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUIGestiones\FacturaGestion.resx">
       <DependentUpon>FacturaGestion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIGestiones\MedicamentoGestion.resx">
-      <DependentUpon>MedicamentoGestion.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\GUIGestiones\ListaConsulta.resx">
+      <DependentUpon>ListaConsulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIGestiones\PacientesGestion.resx">
-      <DependentUpon>PacientesGestion.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\GUIGestiones\ListaMedicamentos.resx">
+      <DependentUpon>ListaMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIGestiones\ListaPaciente.resx">
+      <DependentUpon>ListaPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUIGestiones\prueba.resx">
       <DependentUpon>prueba.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIGestiones\RolesGestion.resx">
-      <DependentUpon>RolesGestion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIGestiones\UsuariosGestion.resx">
-      <DependentUpon>UsuariosGestion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUIGestiones\VerPermisos.resx">
-      <DependentUpon>VerPermisos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -269,6 +159,10 @@
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">
       <Project>{5d50295d-8379-4628-9d89-a9df19eac0ed}</Project>
       <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reportes\Reportes.csproj">
+      <Project>{1809692B-55EA-46D6-91C9-664C2A4B34B4}</Project>
+      <Name>Reportes</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
 ﻿using General.CLS;
+using General.Controladores;
 using General.GUI.GUIEdicion;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace General.GUI.GUIGestiones
         {
             try
             {
-                _DATOS.DataSource = DataLayer.Consulta.Factura();
+                _DATOS.DataSource = Factura.vw_Factura();
                 FiltrarLocalmente();
             }
             catch (Exception)
@@ -31,13 +32,13 @@ namespace General.GUI.GUIGestiones
         {
             try
             {
-                if (txtFiltrar.Text.Trim().Length <= 0)
+                if (txtFiltro.Text.Trim().Length <= 0)
                 {
                     _DATOS.RemoveFilter();
                 }
                 else
                 {
-                    _DATOS.Filter = "Concepto like '%" + txtFiltrar.Text + "%'";
+                    _DATOS.Filter = "NombrePaciente like '%" + txtFiltro.Text + "%'";
                 }
                 dgvFactura.AutoGenerateColumns = false;
                 dgvFactura.DataSource = _DATOS;
@@ -50,45 +51,56 @@ namespace General.GUI.GUIGestiones
             InitializeComponent();
             Cargar();
         }
-
-        private void Insertar_Click(object sender, EventArgs e)
-        {
-            FacturaEdicion f = new FacturaEdicion();
-            f.ShowDialog();
-            Cargar();
-        }
-
         private void FacturaGestion_Load(object sender, EventArgs e)
         {
             Cargar();
         }
+        private void Eliminar_Click(object sender, EventArgs e)
+        {
+            
+        }
 
-        private void Modificar_Click(object sender, EventArgs e)
+        private void dgvFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void Insertar_Click_1(object sender, EventArgs e)
+        {
+            FacturaEdicion f = new FacturaEdicion();
+        
+            f.ShowDialog();
+            Cargar();
+        }
+
+        
+
+        private void Modificar_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (MessageBox.Show("Desea modificar este Registro?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Desea modificar esta Cuenta?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     FacturaEdicion f = new FacturaEdicion();
-
-                    f.txtID_Factura.Text = dgvFactura.CurrentRow.Cells["ID_Factura"].Value.ToString();
-                    f.cbbIDConsulta.Text = dgvFactura.CurrentRow.Cells["ID_Consulta"].Value.ToString();
-                    f.txtConcepto.Text = dgvFactura.CurrentRow.Cells["Concepto"].Value.ToString();
-                    f.txtMonto.Text = dgvFactura.CurrentRow.Cells["Monto"].Value.ToString();
-                    f.dtpFechaEmision.Value = Convert.ToDateTime(dgvFactura.CurrentRow.Cells["FechaEmision"].Value);
-                    f.dtpFechaPago.Value = Convert.ToDateTime(dgvFactura.CurrentRow.Cells["FechaPago"].Value);
-                    f.cbbMetodoPago.Text = dgvFactura.CurrentRow.Cells["MetodoPago"].Value.ToString();
-                    //f.txtSubTotal.Text = dgvFactura.CurrentRow.Cells["SubTotal"].Value.ToString();
-                    //f.txtTotal.Text = dgvFactura.CurrentRow.Cells["Total"].Value.ToString();
-                    //f.txtCantidad.Text = dgvFactura.CurrentRow.Cells["Cantidad"].Value.ToString();
-                    //f.txtPrecio.Text = dgvFactura.CurrentRow.Cells["PrecioUnitario"].Value.ToString();
-
-
-
-
-                    f.ShowDialog();
+                    f.txtIdFactura.Text = dgvFactura.CurrentRow.Cells["ID_Factura"].Value.ToString();
+                    f.txtNumeroFactura.Text = dgvFactura.CurrentRow.Cells["Fac_numeroFactura"].Value.ToString();
+                    f.dtpFecha.Text = dgvFactura.CurrentRow.Cells["Fac_fecha"].Value.ToString();
+                    f.cbbMetodoPago.Text = dgvFactura.CurrentRow.Cells["Fac_MetodoPago"].Value.ToString();
+                    f.txtID_Paciente.Text = dgvFactura.CurrentRow.Cells["Pacientes_ID_Paciente"].Value.ToString();
+                    f.lbNombreCliente.Text = dgvFactura.CurrentRow.Cells["NombrePaciente"].Value.ToString();
+                    f.lbDoc.Text =  dgvFactura.CurrentRow.Cells["NombreDoctor"].Value.ToString();
+                    f.lbPrecioConsulta.Text = "$" + dgvFactura.CurrentRow.Cells["PrecioConsulta"].Value.ToString();
+                    f.txtConsulta.Text = dgvFactura.CurrentRow.Cells["Consulta_ID_Consulta"].Value.ToString();
+                    f.Show();
+                   
                     Cargar();
                 }
+
             }
             catch (Exception ex)
             {
@@ -96,31 +108,52 @@ namespace General.GUI.GUIGestiones
             }
         }
 
-        private void Eliminar_Click(object sender, EventArgs e)
+  
+
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
             {
                 if (MessageBox.Show("¿Desea eliminar esta Cuenta?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
                     Factura f = new Factura();
-                    f.ID_Factura = Convert.ToInt32(dgvFactura.CurrentRow.Cells["ID_Factura"].Value.ToString());
-                    if (f.Eliminar())
+                    int IDFactura = Convert.ToInt32(dgvFactura.CurrentRow.Cells["ID_Factura"].Value.ToString());
+
+                    var Controller = new ControladorFactura();
+
+                    bool eliminado = Controller.EliminarFactura(IDFactura);
+
+                    if (eliminado)
                     {
-                        MessageBox.Show("Registro eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Cuenta eliminada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("El registro no pudo ser eliminada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("La cuenta no pudo ser eliminada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     Cargar();
                 }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un error al intentar eliminar la factura: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
-        private void dgvFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvFactura_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtFiltro_Click(object sender, EventArgs e)
+        {
+     
+        }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+            Cargar();
         }
     }
 }
