@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,12 +16,48 @@ namespace General.CLS
         Int32 ID_Empleado;
         Int32 NumeroLicencia;
         string Especialidad;
-
         public Int32 ID_Doctor1 { get => ID_Doctor; set => ID_Doctor = value; }
         public int ID_Especialidad1 { get => ID_Especialidad; set => ID_Especialidad = value; }
         public int ID_Empleado1 { get => ID_Empleado; set => ID_Empleado = value; }
         public int NumeroLicencia1 { get => NumeroLicencia; set => NumeroLicencia = value; }
         public string Especialidads { get => Especialidad; set => Especialidad = value; }
+
+        public static int ObtenerCantidadCitas()
+        {
+            int totalCitas = 0; // Valor por defecto
+
+            DateTime hoy = DateTime.Now.Date;  // Obtienes solo la fecha actual sin la hora
+            string Consulta = $"CALL ObtenerCantidadCitas('{hoy.ToString("yyyy-MM-dd")}')";  // Formato adecuado sin espacio extra
+
+            DBOperaciones operacion = new DBOperaciones();
+
+            try
+            {
+                // Ejecutar la consulta y obtener el DataTable con los resultados
+                DataTable resultado = operacion.Consultar(Consulta);
+
+                // Verificamos si el DataTable tiene filas (resultados)
+                if (resultado.Rows.Count > 0)
+                {
+                    // Extraemos el valor de la primera fila y la columna "TotalCitas" (asumiendo que la columna tiene ese nombre)
+                    totalCitas = Convert.ToInt32(resultado.Rows[0]["TotalCitas"]);
+                }
+
+                Console.WriteLine("La cantidad de consultas son " + totalCitas);
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+            return totalCitas;
+        }
+
+
+
+
+
 
         public static DataTable MostrarEspecialidades()
         {
@@ -34,7 +71,6 @@ namespace General.CLS
             catch (Exception ex) { }
             return Resultado;
         }
-
         public static DataTable MostrarDoctores()
         {
             DataTable dt = new DataTable();
@@ -46,7 +82,6 @@ namespace General.CLS
             { }
             return dt;
         }
-
         public Boolean Insertar()
         {
             Boolean Resultado = false;

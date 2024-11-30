@@ -23,7 +23,6 @@ namespace General.GUI
                 _Datos.DataSource = Doctor.MostrarDoctores();
                 dtbDoctor.DataSource = _Datos;
                 dtbDoctor.AutoGenerateColumns = false;
-              
             }
             catch (Exception)
             {

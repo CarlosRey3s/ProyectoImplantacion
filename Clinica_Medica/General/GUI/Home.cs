@@ -1,4 +1,5 @@
-﻿using System;
+﻿using General.CLS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,18 +13,27 @@ namespace General.GUI
 {
     public partial class Home : Form
     {
+        public void ActualizarLabel()
+        {
+         
+            int resultado = Doctor.ObtenerCantidadCitas();
+            
+            canCitas.Text = resultado.ToString();
+        }
 
-      
 
-        
+
+
+
         public Home()
         {
             InitializeComponent();
+            
         }
 
         private void Home_Load(object sender, EventArgs e)
         {
-           
+            ActualizarLabel();
         }
     }
 }
