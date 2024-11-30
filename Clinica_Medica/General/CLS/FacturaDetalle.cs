@@ -6,44 +6,86 @@ using System.Threading.Tasks;
 
 namespace General.CLS
 {
-    public class FacturaDetalle
+    internal class FacturaDetalle
     {
         Int32 _ID_FacturaDetalle;
-        Int32 Cantidad;
-        Decimal Descuento;
-        Decimal SubTotal;
-        Decimal Total;
-        Int32 Facturas_ID_Factura;
-        Int32 Medicamentos_ID_Medicamento;
-        Int32 AsigancionMedicamento_ID_RecetaMedicamento;
+        Int32 _ID_Factura;
+        Int32 _ID_Insumo;
+        Int32 _Cantidad;
+        decimal _PrecioUnitario;
 
         public int ID_FacturaDetalle { get => _ID_FacturaDetalle; set => _ID_FacturaDetalle = value; }
-        public int Cantidad1 { get => Cantidad; set => Cantidad = value; }
-        public decimal Descuento1 { get => Descuento; set => Descuento = value; }
-        public decimal SubTotal1 { get => SubTotal; set => SubTotal = value; }
-        public decimal Total1 { get => Total; set => Total = value; }
-        public int Facturas_ID_Factura1 { get => Facturas_ID_Factura; set => Facturas_ID_Factura = value; }
-        public int Medicamentos_ID_Medicamento1 { get => Medicamentos_ID_Medicamento; set => Medicamentos_ID_Medicamento = value; }
+        public int ID_Factura { get => _ID_Factura; set => _ID_Factura = value; }
+        public int ID_Insumo { get => _ID_Insumo; set => _ID_Insumo = value; }
+        public int Cantidad { get => _Cantidad; set => _Cantidad = value; }
+        public decimal PrecioUnitario { get => _PrecioUnitario; set => _PrecioUnitario = value; }
 
-        public Boolean Eliminar()
+        public Boolean Insertar()
         {
             Boolean Resultado = false;
-            // Crear el objeto de operación
             DataLayer.DBOperaciones Operacion = new DataLayer.DBOperaciones();
-            // Construir la sentencia SQL}
             StringBuilder Sentencia = new StringBuilder();
-            Sentencia.Append("CALL sp_EliminarDetalle(" + ID_FacturaDetalle + ");");
+
+            Sentencia.Append("INSERT INTO Factura_Detalle (ID_Factura, ID_Insumo, Cantidad, PrecioUnitario) VALUES (");
+            Sentencia.Append("'" + _ID_Factura + "', '" + _ID_Insumo + "', '" + _Cantidad + "', '" + _PrecioUnitario + "');");
 
             try
             {
-                // Ejecutar la sentencia SQL y verificar el resultado
                 if (Operacion.EjecutarSentencia(Sentencia.ToString()) >= 0)
                 {
                     Resultado = true;
                 }
-                else
+            }
+            catch (Exception)
+            {
+                Resultado = false;
+            }
+
+            return Resultado;
+        }
+
+        public Boolean Actualizar()
+        {
+            Boolean Resultado = false;
+            DataLayer.DBOperaciones Operacion = new DataLayer.DBOperaciones();
+            StringBuilder Sentencia = new StringBuilder();
+
+            Sentencia.Append("UPDATE Factura_Detalle SET ");
+            Sentencia.Append("ID_Factura='" + _ID_Factura + "', ");
+            Sentencia.Append("ID_Insumo='" + _ID_Insumo + "', ");
+            Sentencia.Append("Cantidad='" + _Cantidad + "', ");
+            Sentencia.Append("PrecioUnitario='" + _PrecioUnitario + "' ");
+            Sentencia.Append("WHERE ID_FacturaDetalle='" + _ID_FacturaDetalle + "';");
+
+            try
+            {
+                if (Operacion.EjecutarSentencia(Sentencia.ToString()) >= 0)
                 {
-                    Resultado = false;
+                    Resultado = true;
+                }
+            }
+            catch (Exception)
+            {
+                Resultado = false;
+            }
+
+            return Resultado;
+        }
+
+        public Boolean Eliminar()
+        {
+            Boolean Resultado = false;
+            DataLayer.DBOperaciones Operacion = new DataLayer.DBOperaciones();
+            StringBuilder Sentencia = new StringBuilder();
+
+            Sentencia.Append("DELETE FROM Factura_Detalle ");
+            Sentencia.Append("WHERE ID_FacturaDetalle='" + _ID_FacturaDetalle + "';");
+
+            try
+            {
+                if (Operacion.EjecutarSentencia(Sentencia.ToString()) >= 0)
+                {
+                    Resultado = true;
                 }
             }
             catch (Exception)
@@ -54,7 +96,4 @@ namespace General.CLS
             return Resultado;
         }
     }
-
-  
-
 }

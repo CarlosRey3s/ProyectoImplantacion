@@ -73,6 +73,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Inventario.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GUI\visorCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\visorCitas.Designer.cs">
+      <DependentUpon>visorCitas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\visorFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\visorCitas.resx">
+      <DependentUpon>visorCitas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\visorFactura.resx">
       <DependentUpon>visorFactura.cs</DependentUpon>
     </EmbeddedResource>

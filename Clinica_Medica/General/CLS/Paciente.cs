@@ -16,7 +16,6 @@ namespace General.CLS
         string _Telefono;
         string _CorreoElectronico;
         string _Direccion;
-        Int32 _ID_PacienteSeleccionado;
         // CTRL + R + E
         public int ID_Paciente { get => _ID_Paciente; set => _ID_Paciente = value; }
         public string Nombre { get => _Nombre; set => _Nombre = value; }
@@ -26,11 +25,6 @@ namespace General.CLS
         public string Telefono { get => _Telefono; set => _Telefono = value; }
         public string CorreoElectronico { get => _CorreoElectronico; set => _CorreoElectronico = value; }
         public string Direccion { get => _Direccion; set => _Direccion = value; }
-
-        public int ID_PacienteSeleccionado { get; private set; }
-
-
-
         public Boolean Insertar()
         {
             Boolean Resultado = false;
