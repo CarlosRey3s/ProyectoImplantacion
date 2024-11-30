@@ -115,7 +115,10 @@ namespace Principal
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-
+            pictureBox2.Image = btnCitas.Image;
+            TituloBarra.Text = btnCitas.Text;
+            CitasGestion home = new CitasGestion();
+            OpenFroms(home);
         }
         //Drag form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

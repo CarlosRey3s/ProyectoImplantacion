@@ -1,4 +1,6 @@
-﻿using System;
+﻿using General.CLS;
+using General.Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,142 +14,188 @@ namespace General.GUI.GUIEdicion
 {
     public partial class ConsultasEdicion : Form
     {
-        BindingSource _Datos = new BindingSource();
-        BindingSource _Datos2 = new BindingSource();
-        BindingSource _Datos3 = new BindingSource();
-        BindingSource _Datos4 = new BindingSource();
+        private ControladorConsultas controladorConsultas = new ControladorConsultas(); // Instancia del controlador
 
-
-        private void LlenarComboBoxCargos()
+        // Método para llenar el ComboBox de citas
+        private void LlenarComboBoxCitas()
         {
             try
             {
-                _Datos.DataSource = DataLayer.Consulta.RecetasMedicas();
-                cbbID_Receta.DataSource = _Datos;
-                cbbID_Receta.DisplayMember = "NombreInsumo";
-                cbbID_Receta.ValueMember = "ID_Insumo";
+                // Crear un BindingSource para las citas
+                BindingSource _DatosCitas = new BindingSource();
+                _DatosCitas.DataSource = DataLayer.Consulta.Citas(); // Método para obtener las citas
 
-                _Datos2.DataSource = DataLayer.Consulta.Citas();
-                cbbIdcita.DataSource = _Datos2;
-                cbbIdcita.DisplayMember = "NombresPaciente";
-                cbbIdcita.ValueMember = "ID_Cita";
+                // Agregar la opción de "Sin cita asociada" al principio
+                DataTable citasTable = ((BindingSource)_DatosCitas).DataSource as DataTable;
 
-                _Datos3.DataSource = DataLayer.Consulta.Doctor();
-                cbbID_doctor.DataSource = _Datos3;
-                cbbID_doctor.DisplayMember = "NombresEmpleado";
-                cbbID_doctor.ValueMember = "ID_Doctor";
+                DataRow dr = citasTable.NewRow();  // Creando una nueva fila vacía
+                dr["ID_Cita"] = DBNull.Value;      // Asignando DBNull para "Sin cita"
+                //dr["NombresPaciente"] = "Sin cita asociada";  // Texto representativo para sin cita
+                citasTable.Rows.InsertAt(dr, 0);  // Insertar en la primera posición
 
-                _Datos4.DataSource = DataLayer.Consulta.Consultorio();
-                cbbConsultorio.DataSource = _Datos4;
-                cbbConsultorio.DisplayMember = "NumeroConsultorio";
-                cbbConsultorio.ValueMember = "ID_Consultorio";
+                // Asignar el BindingSource al ComboBox
+                cbbCAsociada.DataSource = citasTable;
+                //cbbCAsociada.DisplayMember = "NombresPaciente";
+                cbbCAsociada.ValueMember = "ID_Cita";
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Error al cargar las citas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
+        // Método para habilitar o deshabilitar el campo Citas_ID_Cita según PoseeCita
+        private void cbbPoseeCita_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbPoseeCita.SelectedItem.ToString() == "NO")
+            {
+                cbbCAsociada.Enabled = false;  // Deshabilitar ComboBox de Citas_ID_Cita
+                cbbCAsociada.SelectedIndex = 0;  // Seleccionar "Sin cita asociada"
+            }
+            else
+            {
+                cbbCAsociada.Enabled = true;  // Habilitar ComboBox de Citas_ID_Cita
+            }
+        }
+
+        // Método de validación de campos
         private Boolean Validar()
         {
             Boolean Valido = true;
+
             try
             {
-                if (cbbIdcita.Text.Trim().Length == 0)
+                if (string.IsNullOrWhiteSpace(txtDignostico.Text))
                 {
-                    Notificador.SetError(cbbIdcita, "Este campo no puede quedar vacio");
+                    Notificador.SetError(txtDignostico, "El diagnóstico no puede estar vacío.");
                     Valido = false;
+                }
+                if (string.IsNullOrWhiteSpace(txtPConsulta.Text) || !float.TryParse(txtPConsulta.Text, out _))
+                {
+                    Notificador.SetError(txtPConsulta, "El precio debe ser un número válido.");
+                    Valido = false;
+                }
+
+                // Si "PoseeCita" es "NO", no debe haber cita seleccionada
+                if (cbPoseeCita.SelectedItem.ToString() == "NO")
+                {
+                    if (cbbCAsociada.SelectedValue != null)
+                    {
+                        Notificador.SetError(cbbCAsociada, "No debe seleccionarse una cita si PoseeCita es 'NO'.");
+                        Valido = false;
+                    }
+                }
+                else
+                {
+                    // Si PoseeCita es "SI", debe seleccionarse una cita
+                    if (cbbCAsociada.SelectedValue == null || Convert.ToInt32(cbbCAsociada.SelectedValue) == 0)
+                    {
+                        Notificador.SetError(cbbCAsociada, "Debe seleccionar una cita asociada.");
+                        Valido = false;
+                    }
                 }
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error en la validación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Valido = false;
             }
+
             return Valido;
         }
+        // Constructor
         public ConsultasEdicion()
         {
             InitializeComponent();
         }
 
+        // Al cargar el formulario
+        private void ConsultasEdicion_Load(object sender, EventArgs e)
+        {
+            LlenarComboBoxCitas();
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
+                // Validación de campos
                 if (Validar())
                 {
-                    //CREAR UN OBJETO A PARTIR DE LA CLASE ENTIDAD
+                    // Crear un objeto de la clase Consulta
                     CLS.Consulta oConsulta = new CLS.Consulta();
-                    //SINCRONIZAMOS EL OBJETO CON LA GUI
 
-                    try
+                    // Asignamos los valores a los atributos de la clase Consulta
+                    oConsulta.ID_Consulta = string.IsNullOrWhiteSpace(txtID_Consulta.Text) ? 0 : Convert.ToInt32(txtID_Consulta.Text);
+                    oConsulta.Cons_Diganostico = txtDignostico.Text.Trim();
+                    oConsulta.Cons_Tratamiento = txtPConsulta.Text.Trim();
+                    oConsulta.Cons_PrecioConsulta = float.Parse(txtPConsulta.Text);
+                    oConsulta.Cons_FechaConsulta = dtpFechayHora.Value;
+
+                    // Asignamos el valor de PoseeCita
+                    oConsulta.Cons_PoseeCita = cbPoseeCita.SelectedItem.ToString();
+
+                    // Asignamos Citas_ID_Cita según PoseeCita
+                    if (oConsulta.Cons_PoseeCita == "NO")
                     {
-                        oConsulta.ID_Consulta = Convert.ToInt32(cbbIdcita.Text);
+                        oConsulta.Citas_ID_Cita = 0;  // No hay cita asociada
                     }
-                    catch (Exception)
-                    {
-
-                        oConsulta.ID_Consulta = 0;
-                    }
-                    int SelectedIdInsumo = (int)cbbID_Receta.SelectedValue;
-                    oConsulta.ID_Receta = SelectedIdInsumo;
-                    int SelectedIdcita = (int)cbbIdcita.SelectedValue;
-                    oConsulta.ID_Cita = SelectedIdcita;
-                    int SelectedIdDoc = (int)cbbID_doctor.SelectedValue;
-                    oConsulta.ID_Doctor = SelectedIdDoc;
-                    int SelectedIdConsul = (int)cbbConsultorio.SelectedValue;
-                    oConsulta.ID_Consultorio = SelectedIdConsul;
-                    oConsulta.Dianostico = txtDignostico.Text;
-                    oConsulta.Indicaciones = txtIndicaciones.Text;
-
-
-
-                    //PROCEDER
-                    if (txtID_Consulta.Text.Trim().Length == 0)
-                    {
-                        //GUARDAR NUEVO REGISTROS
-                        if (oConsulta.Insertar())
-                        {
-                            MessageBox.Show("Registro Guardado");
-                            Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("El registro no pude ser almacenado");
-                        }
-                    }
-
                     else
                     {
-                        //ACTUALIZAR REGISTRO
-                        if (oConsulta.Actualizar())
+                        oConsulta.Citas_ID_Cita = Convert.ToInt32(cbbCAsociada.SelectedValue);  // Cita seleccionada
+                    }
+
+                    // Si el ID de la consulta es 0, significa que es una nueva inserción
+                    if (oConsulta.ID_Consulta == 0)
+                    {
+                        if (controladorConsultas.InsertarConsulta(oConsulta))
                         {
-                            MessageBox.Show("Registro Actualizado");
+                            MessageBox.Show("Consulta registrada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
                         else
                         {
-                            MessageBox.Show("El registro no pude ser actualizado");
+                            MessageBox.Show("Error al registrar la consulta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-
-
+                    else
+                    {
+                        // Si el ID de la consulta no es 0, es una actualización
+                        if (controladorConsultas.ActualizarConsulta(oConsulta))
+                        {
+                            MessageBox.Show("Consulta actualizada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al actualizar la consulta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                MessageBox.Show("Error al guardar la consulta: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void ConsultasEdicion_Load(object sender, EventArgs e)
-        {
-            LlenarComboBoxCargos();
-        }
-
+        // Cancelar y cerrar el formulario
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cbPoseeCita_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbPoseeCita.SelectedItem.ToString() == "NO")
+            {
+                // Si PoseeCita es "NO", deshabilitamos el ComboBox de Citas_ID_Cita
+                cbbCAsociada.Enabled = false;
+                cbbCAsociada.SelectedIndex = -1;  // Limpiamos la selección para evitar confusión
+            }
+            else
+            {
+                // Si PoseeCita es "SI", habilitamos el ComboBox de Citas_ID_Cita
+                cbbCAsociada.Enabled = true;
+            }
         }
     }
 }
