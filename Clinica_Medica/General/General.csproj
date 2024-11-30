@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="CLS\Citas.cs" />
     <Compile Include="CLS\Consulta.cs" />
     <Compile Include="CLS\Consultorio.cs" />
@@ -91,6 +92,41 @@
     </Compile>
     <Compile Include="GUI\GUIGestiones\VerPermisos.Designer.cs">
       <DependentUpon>VerPermisos.cs</DependentUpon>
+=======
+    <Compile Include="CLS\Doctor.cs" />
+    <Compile Include="CLS\Empleados.cs" />
+    <Compile Include="Controlador\ControladorDoctores.cs" />
+    <Compile Include="Controlador\ControladorEmpleados.cs" />
+    <Compile Include="GUI\GUIEdicion\DoctoresEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUIEdicion\DoctoresEdicion.Designer.cs">
+      <DependentUpon>DoctoresEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUIGestiones\DoctoresGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUIGestiones\DoctoresGestion.Designer.cs">
+      <DependentUpon>DoctoresGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUIEdicion\EmpleadosEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUIEdicion\EmpleadosEdicion.Designer.cs">
+      <DependentUpon>EmpleadosEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUIGestiones\EmpleadosGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUIGestiones\EmpleadosGestion.Designer.cs">
+      <DependentUpon>EmpleadosGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUIGestiones\prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUIGestiones\prueba.Designer.cs">
+      <DependentUpon>prueba.cs</DependentUpon>
+>>>>>>> 68e680a36ae6aba734ebe49cb536f68d80d8fd83
     </Compile>
     <Compile Include="GUI\Home.cs">
       <SubType>Form</SubType>
@@ -112,6 +148,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="GUI\GUIEdicion\CitasEdicion.resx">
       <DependentUpon>CitasEdicion.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +169,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUIGestiones\VerPermisos.resx">
       <DependentUpon>VerPermisos.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="GUI\GUIEdicion\DoctoresEdicion.resx">
+      <DependentUpon>DoctoresEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIGestiones\DoctoresGestion.resx">
+      <DependentUpon>DoctoresGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIEdicion\EmpleadosEdicion.resx">
+      <DependentUpon>EmpleadosEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIGestiones\EmpleadosGestion.resx">
+      <DependentUpon>EmpleadosGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIGestiones\prueba.resx">
+      <DependentUpon>prueba.cs</DependentUpon>
+>>>>>>> 68e680a36ae6aba734ebe49cb536f68d80d8fd83
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -150,5 +203,6 @@
       <Name>DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

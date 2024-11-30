@@ -1,5 +1,6 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     "",
     "\\DataLayer",
     "\\General",
@@ -9,5 +10,9 @@
     "\\General\\GUI\\GUIGestiones"
   ],
   "SelectedNode": "\\General\\GUI\\GUIEdicion\\ConsultasEdicion.cs",
+=======
+    ""
+  ],
+>>>>>>> 68e680a36ae6aba734ebe49cb536f68d80d8fd83
   "PreviewInSolutionExplorer": false
 }
